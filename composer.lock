@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c6026b96e6fa11a641b51a6ba976f5e",
+    "hash": "ac013d825a73acb225b2a9df61a0b02a",
     "packages": [
+        {
+            "name": "artem-schander/l5-modular",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Artem-Schander/L5Modular.git",
+                "reference": "1576e84b439bf40969abfe1e5231e7e5d5128068"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Artem-Schander/L5Modular/zipball/1576e84b439bf40969abfe1e5231e7e5d5128068",
+                "reference": "1576e84b439bf40969abfe1e5231e7e5d5128068",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.1.6",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArtemSchander\\L5Modular\\": "src/ArtemSchander/L5Modular/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artem Schander",
+                    "email": "a.schander@vanameland.de"
+                }
+            ],
+            "description": "Modular pattern generator for Laravel 5",
+            "homepage": "https://github.com/Artem-Schander/L5Modular",
+            "keywords": [
+                "Artem",
+                "Schander",
+                "artisan",
+                "generator",
+                "l5modular",
+                "laravel",
+                "modular",
+                "pattern"
+            ],
+            "time": "2015-07-15 21:50:11"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "2.0.0",
@@ -2924,7 +2972,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "artem-schander/l5-modular": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
