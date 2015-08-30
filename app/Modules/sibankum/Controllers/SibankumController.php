@@ -14,7 +14,17 @@ class SibankumController extends Controller {
 	 */
 	public function index()
 	{
-		return view("sibankum::index");
+		return view("sibankum::underconstruction");
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function demo()
+	{
+		return view("sibankum::home");
 	}
 
 	/**
