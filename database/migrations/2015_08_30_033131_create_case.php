@@ -22,7 +22,7 @@ class CreateCase extends Migration
             $table->string('uuid', 36);
             $table->integer('number')->nullable();
             $table->string('work_unit')->nullable();
-            $table->string('case_nuber')->nullable();
+            $table->string('case_number')->nullable();
             $table->text('principal')->nullable();
             $table->text('object')->nullable();
             $table->text('proposal')->nullable();

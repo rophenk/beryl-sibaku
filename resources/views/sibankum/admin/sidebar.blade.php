@@ -26,7 +26,7 @@
 						</a>
 						<ul class="sub-menu">
 							<li class="@yield('case-active')">
-								<a href="/cases">Perkara</a>
+								<a href="/case">Perkara</a>
 							</li>
 						</ul>
 					</li>

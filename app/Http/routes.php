@@ -259,6 +259,45 @@ Route::get('apis/destroy/{uuid?}', [
 ]);
 
 /**
+ * Route untuk menampilkan data Case
+ */
+Route::get('case', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseController@index',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case/create', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseController@create',
+	'roles' => ['administrator'] // Only an administrator can access this route
+]);
+Route::post('case/store', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseController@store',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case/edit/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseController@edit',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case/show/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseController@show',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('case/update', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseController@update',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case/destroy/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseController@destroy',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+
+/**
  * Route Untuk menampilkan user
  */
 Route::get('users', [
