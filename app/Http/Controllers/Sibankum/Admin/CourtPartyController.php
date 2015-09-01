@@ -7,10 +7,11 @@ use Rhumsaa\Uuid\Uuid;
 use Rhumsaa\Uuid\Exception\UnsatisfiedDependencyException;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\Sibankum\CourtType;
+use App\Models\Sibankum\CourtParty;
 use DB;
 
-class CourtTypeController extends Controller
+
+class CourtPartyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,8 +22,8 @@ class CourtTypeController extends Controller
     {
         $user       = $request->user();
         // Tampilkan semua data Instansi
-        $courtType = CourtType::all();
-        return view('sibankum.admin.courtTypeTable', ['court_type' => $courtType, 'user' => $user]);
+        $courtParty = CourtParty::all();
+        return view('sibankum.admin.courtPartyTable', ['court_party' => $courtParty, 'user' => $user]);
     }
 
     /**
@@ -34,7 +35,7 @@ class CourtTypeController extends Controller
     {
          $user       = $request->user();
         // Tampilkan Form Instansi
-        return view('sibankum.admin.courtTypeForm', ['user' => $user]);
+        return view('sibankum.admin.courtPartyForm', ['user' => $user]);
     }
 
     /**
@@ -46,12 +47,12 @@ class CourtTypeController extends Controller
     public function store(Request $request)
     {
         // Validate the request...
-        $court_type = new CourtType;
-        $court_type->uuid = Uuid::uuid4();
-        $court_type->name = $request->name;
-        $court_type->alias = $request->alias;
-        $court_type->save();
-        return redirect("/court_type");
+        $court_party = new CourtParty;
+        $court_party->uuid = Uuid::uuid4();
+        $court_party->name = $request->name;
+        $court_party->side = $request->side;
+        $court_party->save();
+        return redirect("/court_party");
     }
 
     /**
@@ -75,11 +76,11 @@ class CourtTypeController extends Controller
     {
         $user       = $request->user();
         // Tampilka data Instansi
-        $court_type = CourtType::where('uuid', $request->uuid)
+        $court_party = CourtParty::where('uuid', $request->uuid)
                                     ->get();
 
         //Tampilkan Form yang terisi data
-        return view('sibankum.admin.courtTypeFormEdit', ['court_type' => $court_type, 'user' => $user]);
+        return view('sibankum.admin.courtPartyFormEdit', ['court_party' => $court_party, 'user' => $user]);
     }
 
     /**
@@ -92,12 +93,12 @@ class CourtTypeController extends Controller
     public function update(Request $request)
     {
         //Validate the request...
-        CourtType::where('uuid' ,$request->uuid)
+        CourtParty::where('uuid' ,$request->uuid)
         ->update([
             'name' => $request->name, 
-            'alias' => $request->alias 
+            'side' => $request->side 
             ]);
-        return redirect("/court_type");
+        return redirect("/court_party");
     }
 
     /**
@@ -109,7 +110,7 @@ class CourtTypeController extends Controller
     public function destroy($uuid)
     {
         // Menghapus data
-        DB::table('court_type')->where('uuid', '=' ,$uuid)->delete();
-        return redirect("/court_type");    
+        DB::table('court_party')->where('uuid', '=' ,$uuid)->delete();
+        return redirect("/court_party");    
     }
 }

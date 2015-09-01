@@ -7,10 +7,10 @@ use Rhumsaa\Uuid\Uuid;
 use Rhumsaa\Uuid\Exception\UnsatisfiedDependencyException;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\Sibankum\CourtType;
+use App\Models\Sibankum\CourtLevel;
 use DB;
 
-class CourtTypeController extends Controller
+class CourtLevelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,8 +21,8 @@ class CourtTypeController extends Controller
     {
         $user       = $request->user();
         // Tampilkan semua data Instansi
-        $courtType = CourtType::all();
-        return view('sibankum.admin.courtTypeTable', ['court_type' => $courtType, 'user' => $user]);
+        $courtLevel = CourtLevel::all();
+        return view('sibankum.admin.courtLevelTable', ['court_level' => $courtLevel, 'user' => $user]);
     }
 
     /**
@@ -34,7 +34,7 @@ class CourtTypeController extends Controller
     {
          $user       = $request->user();
         // Tampilkan Form Instansi
-        return view('sibankum.admin.courtTypeForm', ['user' => $user]);
+        return view('sibankum.admin.courtLevelForm', ['user' => $user]);
     }
 
     /**
@@ -46,12 +46,11 @@ class CourtTypeController extends Controller
     public function store(Request $request)
     {
         // Validate the request...
-        $court_type = new CourtType;
-        $court_type->uuid = Uuid::uuid4();
-        $court_type->name = $request->name;
-        $court_type->alias = $request->alias;
-        $court_type->save();
-        return redirect("/court_type");
+        $court_level = new CourtLevel;
+        $court_level->uuid = Uuid::uuid4();
+        $court_level->name = $request->name;
+        $court_level->save();
+        return redirect("/court_level");
     }
 
     /**
@@ -73,13 +72,13 @@ class CourtTypeController extends Controller
      */
     public function edit(Request $request)
     {
-        $user       = $request->user();
+         $user       = $request->user();
         // Tampilka data Instansi
-        $court_type = CourtType::where('uuid', $request->uuid)
+        $court_level = CourtLevel::where('uuid', $request->uuid)
                                     ->get();
 
         //Tampilkan Form yang terisi data
-        return view('sibankum.admin.courtTypeFormEdit', ['court_type' => $court_type, 'user' => $user]);
+        return view('sibankum.admin.courtLevelFormEdit', ['court_level' => $court_level, 'user' => $user]);
     }
 
     /**
@@ -92,12 +91,11 @@ class CourtTypeController extends Controller
     public function update(Request $request)
     {
         //Validate the request...
-        CourtType::where('uuid' ,$request->uuid)
+        CourtLevel::where('uuid' ,$request->uuid)
         ->update([
-            'name' => $request->name, 
-            'alias' => $request->alias 
+            'name' => $request->name,
             ]);
-        return redirect("/court_type");
+        return redirect("/court_level");
     }
 
     /**
@@ -108,8 +106,8 @@ class CourtTypeController extends Controller
      */
     public function destroy($uuid)
     {
-        // Menghapus data
-        DB::table('court_type')->where('uuid', '=' ,$uuid)->delete();
-        return redirect("/court_type");    
+        // Menghapus data Instansi
+        DB::table('court_level')->where('uuid', '=' ,$uuid)->delete();
+        return redirect("/court_level");    
     }
 }

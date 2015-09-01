@@ -74,6 +74,83 @@ Route::get('court_type/destroy/{uuid?}', [
 	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
 ]);
 
+/**
+ * Route untuk menampilkan data Court Level
+ */
+Route::get('court_level', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtLevelController@index',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_level/create', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtLevelController@create',
+	'roles' => ['administrator'] // Only an administrator can access this route
+]);
+Route::post('court_level/store', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtLevelController@store',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_level/edit/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtLevelController@edit',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_level/show/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtLevelController@show',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('court_level/update', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtLevelController@update',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_level/destroy/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtLevelController@destroy',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+
+/**
+ * Route untuk menampilkan data Court Party
+ */
+Route::get('court_party', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtPartyController@index',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_party/create', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtPartyController@create',
+	'roles' => ['administrator'] // Only an administrator can access this route
+]);
+Route::post('court_party/store', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtPartyController@store',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_party/edit/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtPartyController@edit',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_party/show/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtPartyController@show',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('court_party/update', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtPartyController@update',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_party/destroy/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CourtPartyController@destroy',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
 
 /**
  * Route Untuk menampilkan user

@@ -24,17 +24,17 @@
             <div class="ryl-madrin-logo-1"></div>
             <h4>SIBANKUM</h4></a></header>
         <ul class="ryl-nav-right-content">
-          <li><a href="index2.html#home">HOME</a></li>
-          <li><a href="index2.html#about">ABOUT</a></li>
-          <li><a href="index2.html#case-study">CASE STUDIES</a></li>
-          <li><a href="index2.html#service">SERVICE</a></li>
-          <li><a href="index2.html#testimonial">TESTIMONIALS</a></li>
-          <li><a href="index2.html#pricing-table">PRICE</a></li>
-          <li><a href="index2.html#process">PROCESS</a></li>
-          <li><a href="index2.html#news">NEWS</a></li>
-          <li><a href="index2.html#contact">CONTACT</a></li>
-          <li><a href="404.html">404 ERROR</a></li>
-          <li><a href="underconstruction.html">UNDERCONSTRUCTION</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#case-study">CASE STUDIES</a></li>
+          <li><a href="#service">SERVICE</a></li>
+          <li><a href="#testimonial">TESTIMONIALS</a></li>
+          <li><a href="#pricing-table">PRICE</a></li>
+          <li><a href="#process">PROCESS</a></li>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="">404 ERROR</a></li>
+          <li><a href="">UNDERCONSTRUCTION</a></li>
         </ul>
         <footer>
           <ul class="ryl-list-inline-block">
@@ -81,7 +81,7 @@
                 <h1 class="ryl-bold-heading">UNDER CONSTRUCTION!</h1>
                 <p>WE’RE WORKING ON SOME IMPROVEMENTS AND WILL COME BACK IN</p>
               </div>
-              <div countdown-time=" +6o +15d +8h +30m +15s " class="ryl-countdown-clock"></div>
+              <div countdown-time=" +1o +15d +8h +30m +15s " class="ryl-countdown-clock"></div>
             </div>
           </div>
         </div>

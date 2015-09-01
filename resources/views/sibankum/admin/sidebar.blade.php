@@ -20,32 +20,32 @@
 					<li class="@yield('case-active')">
 						<a href="javascript:;">
 						<i class="icon-briefcase"></i>
-						<span class="title">Case</span>
+						<span class="title">Perkara</span>
 						<span class="selected"></span>
 						<span class="arrow open"></span>
 						</a>
 						<ul class="sub-menu">
 							<li class="@yield('case-active')">
-								<a href="/cases">Case</a>
+								<a href="/cases">Perkara</a>
 							</li>
 						</ul>
 					</li>
 					<li class="@yield('settings-active')">
 						<a href="javascript:;">
 						<i class="icon-settings"></i>
-						<span class="title">Settings</span>
+						<span class="title">Pengaturan</span>
 						<span class="selected"></span>
 						<span class="arrow open"></span>
 						</a>
 						<ul class="sub-menu">
 							<li class="@yield('court_party-active')">
-								<a href="/court_party">Court Party</a>
+								<a href="/court_party">Pihak</a>
 							</li>
 							<li class="@yield('court_level-active')">
-								<a href="/court_level">Court Level</a>
+								<a href="/court_level">Tingkatan Pengadilan</a>
 							</li>
 							<li class="@yield('court_type-active')">
-								<a href="/court_type">Court Type</a>
+								<a href="/court_type">Jenis Pengadilan</a>
 							</li>
 						</ul>
 					</li>

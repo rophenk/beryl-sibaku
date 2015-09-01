@@ -1,5 +1,5 @@
 @extends('sibankum.admin.master')
-@section('title', 'Jenis Pengadilan' )
+@section('title', 'Tingkatan Pengadilan' )
 @section('pagestyle')
 {!! Html::style('sbk/admin/assets/global/plugins/select2/select2.css') !!}
 {!! Html::style('sbk/admin/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') !!}
@@ -8,12 +8,12 @@
 @section('breadcrumb')
 
 						<li>
-							<a href="/court_type">Jenis Pengadilan</a>
+							<a href="/court_level">Tingkatan Pengadilan</a>
 							<i class="fa fa-angle-right"></i>
 						</li>
 
 						<li>
-							Jenis Pengadilan Terdaftar
+							Tingkatan Pengadilan Terdaftar
 						</li>
 @endsection
 
@@ -29,7 +29,7 @@ active open
 $addbutton = '<div class="row">
 										<div class="col-md-6">
 											<div class="btn-group">
-												<a href="/court_type/create">
+												<a href="/court_level/create">
 													<button id="sample_editable_1_new" class="btn green">
 													Add New <i class="fa fa-plus"></i>
 													</button>
@@ -48,7 +48,7 @@ $addbutton = '<div class="row">
 						<div class="portlet box grey-cascade">
 							<div class="portlet-title">
 								<div class="caption">
-									<i class="fa fa-globe"></i>Jenis Pengadilan Terdaftar
+									<i class="fa fa-globe"></i>Tingkatan Pengadilan Terdaftar
 								</div>
 								<div class="tools">
 									<a href="javascript:;" class="collapse">
@@ -65,17 +65,14 @@ $addbutton = '<div class="row">
 								<div class="table-toolbar">
 									<?php echo  $addbutton; ?>
 								</div>
-								<table class="table table-striped table-bordered table-hover" id="court_type">
+								<table class="table table-striped table-bordered table-hover" id="court_level">
 								<thead>
 								<tr>
 									<th class="table-checkbox">
-										<input type="checkbox" class="group-checkable" data-set="#court_type .checkboxes"/>
+										<input type="checkbox" class="group-checkable" data-set="#court_level .checkboxes"/>
 									</th>
 									<th>
-										 Nama Jenis Pengadilan
-									</th>
-									<th>
-										 Alias
+										 Nama Tingkatan Pengadilan
 									</th>
 									<th align="right" width="25%">
 										 Option
@@ -83,16 +80,16 @@ $addbutton = '<div class="row">
 								</tr>
 								</thead>
 								<tbody>
-								@forelse ($court_type as $court_type)
+								@forelse ($court_level as $court_level)
 								<?php
 								
-								$uuid = $court_type->uuid;
-								$optionbutton = '<a href="/court_type/edit/'.$uuid.'">
+								$uuid = $court_level->uuid;
+								$optionbutton = '<a href="/court_level/edit/'.$uuid.'">
 																			<button id="editbuton" class="btn green">
 																			Edit <i class="fa fa-edit"></i>
 																			</button>
 																		</a>
-																		<a href="/court_type/destroy/'.$uuid.'" onclick="if(!confirm(\'Anda yakin akan menghapus data ini ?\')){return false;};">
+																		<a href="/court_level/destroy/'.$uuid.'" onclick="if(!confirm(\'Anda yakin akan menghapus data ini ?\')){return false;};">
 																			<button id="editbuton" class="btn green">
 																			Delete <i class="fa fa-close"></i>
 																			</button>
@@ -104,10 +101,7 @@ $addbutton = '<div class="row">
 										<input type="checkbox" class="checkboxes" value="1"/>
 									</td>
 									<td>
-										 {{ $court_type->name }}
-									</td>
-									<td>
-										{{ $court_type->alias }}
+										 {{ $court_level->name }}
 									</td>
 									<td align="right">
 										<?php echo  $optionbutton; ?>
