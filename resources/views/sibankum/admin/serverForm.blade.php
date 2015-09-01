@@ -1,14 +1,14 @@
 @extends('sibankum.admin.master')
-@section('title', 'User' )
+@section('title', 'Server' )
 @section('pagestyle')
-{!! Html::style('sbk/assets/global/css/components-md.css') !!}
-{!! Html::style('sbk/assets/global/css/plugins-md.css') !!}
+{!! Html::style('sbk/admin/assets/global/css/components-md.css') !!}
+{!! Html::style('sbk/admin/assets/global/css/plugins-md.css') !!}
 @endsection
 
 @section('breadcrumb')
 
 						<li>
-							<a href="/users">User</a>
+							<a href="/server">Server</a>
 							<i class="fa fa-angle-right"></i>
 						</li>
 						<li>
@@ -16,11 +16,11 @@
 						</li>
 @endsection
 
-@section('user-active')
+@section('instansi-active')
 active open
 @endsection
 
-@section('user-selected')
+@section('instansi-selected')
 <span class="selected"></span>
 @endsection
 
@@ -33,48 +33,32 @@ active open
 							<div class="portlet-title">
 								<div class="caption font-green">
 									<i class="icon-pin font-green"></i>
-									<span class="caption-subject bold uppercase"> Data User</span>
+									<span class="caption-subject bold uppercase"> Data Server</span>
 								</div>
 							</div>
 							<div class="portlet-body form">
-								<form role="form" method="post" action="/user/store">
+								<form role="form" method="post" action="/server/store">
 									{!! csrf_field() !!}
 									<div class="form-body">
 										<div class="form-group form-md-line-input form-md-floating-label">
 											<input type="text" class="form-control" id="name" name="name">
 											<label for="name">Nama</label>
-											<span class="help-block">Nama User</span>
+											<span class="help-block">Nama Server, contoh : Server #1</span>
 										</div>
 										<div class="form-group form-md-line-input form-md-floating-label">
-											<input type="text" class="form-control" id="email" name="email">
-											<label for="alias">Email</label>
-											<span class="help-block">Alamat Email, contoh : nama@email.com</span>
+											<input type="text" class="form-control" id="address" name="address">
+											<label for="alias">Address</label>
+											<span class="help-block">Alamat server, contoh : http://pia.pertanian.go.id</span>
 										</div>
-										<div class="form-group">
-											<label>Role</label>
-											<select class="form-control" name="role_id">
-												@forelse ($role_options as $role)
-													<option value="{{ $role->id }}">{{ $role->name }}</option>
-												@empty
-													<option>Belum ada data Role</option>
-												@endforelse
-											</select>
-										</div>
-										
 										<div class="form-group">
 											<label>Instansi</label>
 											<select class="form-control" name="instansi_id">
 												@forelse ($instansi_options as $instansi)
-													<option value="{{ $instansi->id }}">{{ $instansi->name }}</option>
+												<option value="{{ $instansi->id }}">{{ $instansi->name }}</option>
 												@empty
-													<option>Belum ada data Instansi</option>
+												<option>Belum ada data Instansi</option>
 												@endforelse
 											</select>
-										</div>
-										<div class="form-group form-md-line-input form-md-floating-label">
-											<input type="password" class="form-control" id="password" name="password">
-											<label for="password">Password</label>
-											<span class="help-block">Password</span>
 										</div>
 									<div class="form-actions noborder">
 										<button type="submit" class="btn blue">Submit</button>

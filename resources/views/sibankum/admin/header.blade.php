@@ -4,7 +4,7 @@
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="index.html">
-			<img src="{{ URL::asset('/sbk/admin/assets/admin/layout2/img/logo-default.png') }}" alt="logo" class="logo-default"/>
+			{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-default.png', 'logo', array('class' => 'logo-default')) !!}
 			</a>
 			<div class="menu-toggler sidebar-toggler">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -400,7 +400,7 @@
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 					<li class="dropdown dropdown-user">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<img alt="" class="img-circle" src="sbk/admin/assets/admin/layout2/img/avatar3_small.jpg"/>
+						{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-kementan.png', 'profil', array('class' => 'img-circle')) !!}
 						<span class="username username-hide-on-mobile">
 						{{ $user->name }}</span>
 						<i class="fa fa-angle-down"></i>

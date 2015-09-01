@@ -21,21 +21,21 @@
     <div id="ryl-nav-right" class="ryl-nav-right">
       <div class="ryl-nav-right-content-wrapper">
         <div class="ryl-close-nav-right"><i class="icon-wrong6"></i></div>
-        <header><a href="index2.html">
+        <header><a href="/index">
             <div class="ryl-madrin-logo-1"></div>
             <h4>SIBANKUM</h4></a></header>
         <ul class="ryl-nav-right-content">
-          <li><a href="#home">BERANDA</a></li>
-          <li><a href="#about">TENTANG</a></li>
-          <li><a href="#case-study">STUDI KASUS</a></li>
-          <li><a href="#service">LAYANAN</a></li>
-          <li><a href="#testimonial">TESTIMONIAL</a></li>
-          <li><a href="#pricing-table">BIAYA</a></li>
-          <li><a href="#process">PROCESS</a></li>
-          <li><a href="#news">BERITA</a></li>
-          <li><a href="#contact">KONTAK</a></li>
-          <li><a href="404.html">404 ERROR</a></li>
-          <li><a href="underconstruction.html">UNDERCONSTRUCTION</a></li>
+          <li><a href="/index#home">BERANDA</a></li>
+          <li><a href="/index#about">TENTANG</a></li>
+          <li><a href="/index#case-study">STUDI KASUS</a></li>
+          <li><a href="/index#service">LAYANAN</a></li>
+          <li><a href="/index#testimonial">TESTIMONIAL</a></li>
+          <li><a href="/index#pricing-table">BIAYA</a></li>
+          <li><a href="/index#process">PROCESS</a></li>
+          <li><a href="/index#news">BERITA</a></li>
+          <li><a href="/index#contact">KONTAK</a></li>
+          <li><a href="/404">404 ERROR</a></li>
+          <li><a href="/">UNDERCONSTRUCTION</a></li>
         </ul>
         <footer>
           <ul class="ryl-list-inline-block">
@@ -128,10 +128,10 @@
             <div class="row"></div>
             <div class="col-md-4"><a href="index2.html" class="ryl-madrin-brand">
                 <div class="ryl-madrin-logo-2"></div>
-                <h4 class="ryl-light-heading">SIBANKUM</h4></a></div>
+                <h4 class="ryl-light-heading"><center>SIBANKUM</center></h4></a></div>
             <div class="ryl-home-header-right-side col-md-8 visible-md visible-lg">
               <ul class="ryl-list-inline-block">
-                <lis><a href="#team" class="ryl-btn-trans-1"><i class="ryl-icon-inline-text icon-right106"></i>Lebih Lanjut</a></lis>
+                <lis><a href="/index#team" class="ryl-btn-trans-1"><i class="ryl-icon-inline-text icon-right106"></i>Lebih Lanjut</a></lis>
                 <li><a href="#"><i class="ryl-icon-circle-border-2 icon-email29"></i></a></li>
                 <li><a href="#"><i class="ryl-icon-circle-border-2 icon-facebook"></i></a></li>
                 <li><a href="#"><i class="ryl-icon-circle-border-2 icon-menu ryl-hamburger"></i></a></li>
@@ -159,6 +159,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12 ryl-section-item">
+              <section id="team">
               <div class="ryl-team-member-style-2 clearfix">
                 <header>
                   <h5>JOHN WHITE</h5><i>Founder</i>
@@ -173,6 +174,7 @@
                   <li><a href="#"><i class="icon-flickr"></i></a></li>
                 </ul>
               </div>
+            </section>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 ryl-section-item">
               <div class="ryl-team-member-style-2 clearfix">

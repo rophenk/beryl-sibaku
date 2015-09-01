@@ -30,6 +30,32 @@
 							</li>
 						</ul>
 					</li>
+					
+					<li class="@yield('instansi-active')">
+						<a href="javascript:;">
+						<i class="icon-cloud-upload"></i>
+						<span class="title">Sumber</span>
+						<span class="arrow "></span>
+						@yield('instansi-selected')
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="/instansi">
+								<i class="icon-briefcase"></i>
+								Instansi</a>
+							</li>
+							<li>
+								<a href="/server">
+								<i class="icon-disc"></i>
+								Server</a>
+							</li>
+							<li>
+								<a href="/apis">
+								<i class="icon-layers"></i>
+								API</a>
+							</li>
+						</ul>
+					</li>
 					<li class="@yield('settings-active')">
 						<a href="javascript:;">
 						<i class="icon-settings"></i>
@@ -49,6 +75,7 @@
 							</li>
 						</ul>
 					</li>
+					@if($user->role_id <= 2)
 					<li class="last @yield('user-active')">
 						<a href="javascript:;">
 						<i class="icon-user"></i>
@@ -67,6 +94,7 @@
 							</li>
 						</ul>
 					</li>
+					@endif
 				</ul>
 				<!-- END SIDEBAR MENU -->
 			</div>

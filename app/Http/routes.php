@@ -153,6 +153,112 @@ Route::get('court_party/destroy/{uuid?}', [
 ]);
 
 /**
+ * Route untuk menampilkan data Instansi
+ */
+Route::get('instansi', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\InstansiController@index',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('instansi/create', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\InstansiController@create',
+	'roles' => ['administrator'] // Only an administrator can access this route
+]);
+Route::post('instansi/store', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\InstansiController@store',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('instansi/edit/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\InstansiController@edit',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('instansi/show/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\InstansiController@show',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('instansi/update', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\InstansiController@update',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('instansi/destroy/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\InstansiController@destroy',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+/**
+ * Route untuk menampilkan data Server
+ */
+Route::get('server', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ServerController@index',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('server/create', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ServerController@create',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('server/store', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ServerController@store',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('server/edit/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ServerController@edit',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('server/update', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ServerController@update',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('server/destroy/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ServerController@destroy',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+/**
+ * Route untuk menampilkan data API/XLS
+ */
+Route::get('apis', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ApiController@index',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('apis/create', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ApiController@create',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('apis/store', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ApiController@store',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('apis/edit/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ApiController@edit',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('apis/update', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ApiController@update',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::get('apis/destroy/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\ApiController@destroy',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+/**
  * Route Untuk menampilkan user
  */
 Route::get('users', [

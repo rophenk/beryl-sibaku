@@ -20,21 +20,21 @@
     <div id="ryl-nav-right" class="ryl-nav-right">
       <div class="ryl-nav-right-content-wrapper">
         <div class="ryl-close-nav-right"><i class="icon-wrong6"></i></div>
-        <header><a href="index2.html">
+        <header><a href="#">
             <div class="ryl-madrin-logo-1"></div>
             <h4>SIBANKUM</h4></a></header>
         <ul class="ryl-nav-right-content">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#case-study">CASE STUDIES</a></li>
-          <li><a href="#service">SERVICE</a></li>
-          <li><a href="#testimonial">TESTIMONIALS</a></li>
-          <li><a href="#pricing-table">PRICE</a></li>
+          <li><a href="#home">BERANDA</a></li>
+          <li><a href="#about">TENTANG</a></li>
+          <li><a href="#case-study">STUDI KASUS</a></li>
+          <li><a href="#service">LAYANAN</a></li>
+          <li><a href="#testimonial">TESTIMONIAL</a></li>
+          <li><a href="#pricing-table">BIAYA</a></li>
           <li><a href="#process">PROCESS</a></li>
-          <li><a href="#news">NEWS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-          <li><a href="">404 ERROR</a></li>
-          <li><a href="">UNDERCONSTRUCTION</a></li>
+          <li><a href="#news">BERITA</a></li>
+          <li><a href="#contact">KONTAK</a></li>
+          <li><a href="#">404 ERROR</a></li>
+          <li><a href="/">UNDERCONSTRUCTION</a></li>
         </ul>
         <footer>
           <ul class="ryl-list-inline-block">
