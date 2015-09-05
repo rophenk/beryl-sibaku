@@ -27,23 +27,21 @@
         <ul class="ryl-nav-right-content">
           <li><a href="/index#home">BERANDA</a></li>
           <li><a href="/index#about">TENTANG</a></li>
-          <li><a href="/index#case-study">STUDI KASUS</a></li>
+          <!--<li><a href="/index#case-study">STUDI KASUS</a></li>
           <li><a href="/index#service">LAYANAN</a></li>
-          <li><a href="/index#testimonial">TESTIMONIAL</a></li>
-          <li><a href="/index#pricing-table">BIAYA</a></li>
-          <li><a href="/index#process">PROCESS</a></li>
-          <li><a href="/index#news">BERITA</a></li>
+          <li><a href="/index#testimonial">TESTIMONIAL</a></li>-->
+          <li><a href="/index#pricing-table">TERBARU</a></li>
+          <!--<li><a href="/index#process">PROCESS</a></li>
+          <li><a href="/index<#news">BERITA</a></li>-->
           <li><a href="/index#contact">KONTAK</a></li>
-          <li><a href="/404">404 ERROR</a></li>
-          <li><a href="/">UNDERCONSTRUCTION</a></li>
         </ul>
         <footer>
-          <ul class="ryl-list-inline-block">
+          <!--<ul class="ryl-list-inline-block">
             <li><a href="#"><i class="ryl-icon-circle-border-2 icon-email29"></i></a></li>
             <li><a href="#"><i class="ryl-icon-circle-border-2 icon-facebook"></i></a></li>
             <li><a href="#"><i class="ryl-icon-circle-border-2 icon-twitter"></i></a></li>
             <li><a data-target="#ryl-modal-search" data-toggle="modal"><i class="ryl-icon-circle-border-2 icon-search"></i></a></li>
-          </ul>
+          </ul>-->
         </footer>
       </div>
     </div>
@@ -131,19 +129,31 @@
                 <h4 class="ryl-light-heading"><center>SIBANKUM</center></h4></a></div>
             <div class="ryl-home-header-right-side col-md-8 visible-md visible-lg">
               <ul class="ryl-list-inline-block">
-                <lis><a href="/index#team" class="ryl-btn-trans-1"><i class="ryl-icon-inline-text icon-right106"></i>Lebih Lanjut</a></lis>
-                <li><a href="#"><i class="ryl-icon-circle-border-2 icon-email29"></i></a></li>
-                <li><a href="#"><i class="ryl-icon-circle-border-2 icon-facebook"></i></a></li>
+                <lis><a href="/index#about" class="ryl-btn-trans-1"><i class="ryl-icon-inline-text icon-right106"></i>Tentang</a></lis>
+                <!--<li><a href="#"><i class="ryl-icon-circle-border-2 icon-email29"></i></a></li>
+                <li><a href="#"><i class="ryl-icon-circle-border-2 icon-facebook"></i></a></li>-->
                 <li><a href="#"><i class="ryl-icon-circle-border-2 icon-menu ryl-hamburger"></i></a></li>
-                <li><a data-target="#ryl-modal-search" data-toggle="modal"><i class="ryl-icon-circle-border-2 icon-search"></i></a></li>
+                <!--<li><a data-target="#ryl-modal-search" data-toggle="modal"><i class="ryl-icon-circle-border-2 icon-search"></i></a></li>-->
               </ul>
             </div>
           </div>
         </header>
         <div id="ryl-home-content" class="container-fluid ryl-cell-vertical-wrapper ryl-home-content-style-2">
           <div class="ryl-cell-middle text-center"><b class="ryl-fs-1">SISTEM INFORMASI BANTUAN HUKUM</b>
-            <hr class="ryl-margin-bottom-35">
-            <p class="ryl-fs-4 ryl-fw-medium">WE HAVE 25 YEARS OF EXPERIENCE IN CIVIL & CRIMINAL DEFENSE</p><a data-target="#ryl-modal-video" data-toggle="modal" class="ryl-play-popup-video icon-play43"></a><a href="#about" class="ryl-next-section"><i class="icon-thin36"></i></a>
+            <!--<hr class="ryl-margin-bottom-35">-->
+            <p class="ryl-fs-4 ryl-fw-medium">Mesin Pencari Dokumen Bantuan Hukum</p>
+            <form class="ryl-form-input-style-1">
+                  <div class="row">
+                    <div class="col-xs-12 text-center">
+                      <input type="text" placeholder="Kata Kunci*"/>
+                    </div>
+                    <div class="col-xs-12 text-center ryl-submit">
+                      <button class="ryl-btn-2">SEARCH</button>
+                    </div>
+                  </div>
+                </form>
+            
+            <a href="#about" class="ryl-next-section"><i class="icon-thin36"></i></a>
           </div>
         </div>
       </header>
@@ -156,7 +166,7 @@
             <hr/>
           </div>
         </header>
-        <div class="container">
+        <!--<div class="container">
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12 ryl-section-item">
               <section id="team">
@@ -225,13 +235,13 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
       </section>
       <section id="case-study">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-case-study-parallax-background-style-1 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
-            <h3>CASE STUDIES</h3>
+            <h3>Studi Kasus</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. </p>
             <hr/>
           </div>
@@ -277,7 +287,7 @@
       <section id="service" class="ryl-bg-light">
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
-            <h3>OUR SERVICES</h3>
+            <h3>LAYANAN BANTUAN HUKUM</h3>
             <p>We are a full service, general practice law firm</p>
             <hr/>
           </div>
@@ -348,11 +358,11 @@
         </div>
       </section>
       <section id="testimonial">
-        <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-testimonial-parallax-background-style-2 ryl-parallax-bg"></div>
+        <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-testimonial-parallax-background-style-3 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-2  ryl-bg-trans ryl-section-header-left ryl-margin-top-50 ryl-margin-bottom-50">
           <div class="container">
-            <h3>WHAT CLIENTS SAY?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. </p>
+            <h3 style="color:white">VISI dan MISI</h3>
+            <p style="color:white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <hr/>
           </div>
         </header>
@@ -474,7 +484,7 @@
           </div>
         </div>
       </section>
-      <section id="pricing-table" class="ryl-bg-light">
+      <!--<section id="pricing-table" class="ryl-bg-light">
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
             <h3>PRICING TABLE</h3>
@@ -592,7 +602,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section>-->
       <section id="contact" class="ryl-bg-trans-dark-1">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-contact-parallax-background-style-1 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-2  ryl-bg-gray">
@@ -606,7 +616,8 @@
           <div class="container">
             <div class="row">
               <div class="col-xs-12 ryl-section-item">
-                <div class="ryl-contact-info"><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-location"></i>16 East Wood Avenue, New York, NY 778569, USA</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-phone"></i>+444 123456789</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-fax1"></i>+444 123456789</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-email29"></i>hello@domain.com</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-domain1"></i>www.domain.com</span></div>
+                <div class="ryl-contact-info"><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-location"></i>Jl. Harsono RM No.3 Ragunan - Pasar Minggu
+Jakarta 12550</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-phone"></i>+62 21 780 4117</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-email29"></i>humas@pertanian.go.id</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-domain1"></i>sibankum.pertanian.go.id</span></div>
               </div>
               <div class="col-xs-12 ryl-section-item">
                 <form class="ryl-form-input-style-1">

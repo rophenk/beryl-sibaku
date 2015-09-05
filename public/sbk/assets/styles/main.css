@@ -931,7 +931,7 @@ q:after {
 .ryl-madrin-logo-1 {
   width: 40px;
   height: 40px;
-  background-image: url("../images/logo.svg");
+  background-image: url("../images/logo.png");
   background-size: 100% 100%;
   background-position: center; }
 
@@ -945,7 +945,7 @@ q:after {
 .ryl-madrin-logo-2 {
   width: 83px;
   height: 83px;
-  background-image: url("../images/logo.svg");
+  background-image: url("../images/logo.png");
   background-size: 100% 100%;
   background-position: center; }
 
@@ -966,7 +966,7 @@ q:after {
 .ryl-madrin-logo-dark-3 {
   width: 109px;
   height: 109px;
-  background-image: url("../images/dark-logo.svg");
+  background-image: url("../images/logo.png");
   background-size: 100% 100%;
   background-position: center; }
 
@@ -4535,7 +4535,7 @@ input, textarea {
   background-image: url("../images/home-bg1.jpg"); }
 
 .ryl-home-parallax-background-style-2 {
-  background-image: url("../images/home-bg2.jpg"); }
+  background-image: url("../images/gedung_pia.jpg"); }
 
 .ryl-quote-parallax-background-style-1 {
   background-image: url("../images/quote-section-bg.jpg"); }
@@ -4555,6 +4555,9 @@ input, textarea {
 .ryl-testimonial-parallax-background-style-2 {
   background-image: url("../images/testimonial-bg2.jpg"); }
 
+.ryl-testimonial-parallax-background-style-3 {
+  background-image: url("../images/testimonial-bg3.jpg"); }
+
 .ryl-twitter-parallax-background-style-1 {
   background-image: url("../images/twitter-bg1.jpg"); }
 
@@ -4565,7 +4568,7 @@ input, textarea {
   background-image: url("../images/contact-bg.jpg"); }
 
 .ryl-case-study-parallax-background-style-1 {
-  background-image: url("../images/case-study-bg1.jpg"); }
+  background-image: url("../images/case-study-bg3.jpg"); }
 
 /* Nav */
 #ryl-main-hamburger {

@@ -61,16 +61,9 @@
         <header id="ryl-home-header" class="clearfix ryl-home-header-style-2">
           <div class="container-fluid">
             <div class="row"></div><a href="index2.html" class="ryl-madrin-brand col-md-4">
-              <div class="ryl-madrin-logo-2"></div>
+              <!--<div class="ryl-madrin-logo-2"></div>-->
               <h4 class="ryl-light-heading">SIBANKUM</h4></a>
             <div class="ryl-home-header-right-side col-md-8 visible-md visible-lg">
-              <ul class="ryl-list-inline-block">
-                <lis><a href="#team" class="ryl-btn-trans-1"><i class="ryl-icon-inline-text icon-right106"></i>FIND OUT MORE</a></lis>
-                <li><a href="#"><i class="ryl-icon-circle-border-2 icon-email29"></i></a></li>
-                <li><a href="#"><i class="ryl-icon-circle-border-2 icon-facebook"></i></a></li>
-                <li><a href="#"><i class="ryl-icon-circle-border-2 icon-menu ryl-hamburger"></i></a></li>
-                <li><a data-target="#ryl-modal-search" data-toggle="modal"><i class="ryl-icon-circle-border-2 icon-search"></i></a></li>
-              </ul>
             </div>
           </div>
         </header>

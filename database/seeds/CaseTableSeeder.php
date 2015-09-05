@@ -23,7 +23,8 @@ class CaseTableSeeder extends Seeder
         'case_number' => '2304/PDT/CPA/2015' ,
 		'principal' => 'Tes Pokok Perkara',
         'object' => 'Tes Object Perkara',
-        'proposal' => 'Tes Pokok Permohonan'
+        'proposal' => 'Tes Pokok Permohonan',
+        'url' => 'http://sibankum.pertanian.go.id/sample/case1.pdf'
 		]);
     }
 }
