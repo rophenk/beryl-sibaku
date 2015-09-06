@@ -15,6 +15,10 @@ class CreateCaseParty extends Migration
         // Buat Tabel Case Party
          Schema::create('case_party', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('case_id')->unsigned();
+            $table->foreign('case_id')
+                  ->references('id')->on('case')
+                  ->onDelete('cascade');
             $table->integer('court_party_id')->unsigned();
             $table->foreign('court_party_id')
                   ->references('id')->on('court_party')

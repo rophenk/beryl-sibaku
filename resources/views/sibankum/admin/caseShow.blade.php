@@ -22,12 +22,12 @@ active open
 @section('case-selected')
 <span class="selected"></span>
 @endsection
-@forelse ($case as $case)
+
 @section('content')
 <div class="row">
 					<div class="col-md-12">
 						<!-- BEGIN Portlet PORTLET-->
-						<div class="portlet box red-sunglo">
+						<div class="portlet box purple">
 							<div class="portlet-title">
 								<div class="caption">
 									<i class="fa fa-gift"></i>Detail Perkara
@@ -82,15 +82,15 @@ active open
 													<i class="fa fa-gift"></i>Informasi Perkara
 												</div>
 												<ul class="nav nav-tabs">
-													<li>
-														<a href="#portlet_tab_3" data-toggle="tab">
+													<li class="active">
+														<a href="#pihak" data-toggle="tab">
 														Pihak </a>
 													</li>
 													<li>
 														<a href="#portlet_tab_2" data-toggle="tab">
 														Jadwal Sidang </a>
 													</li>
-													<li class="active">
+													<li>
 														<a href="#portlet_tab_1" data-toggle="tab">
 														Status Perkara </a>
 													</li>
@@ -98,18 +98,16 @@ active open
 											</div>
 											<div class="portlet-body">
 												<div class="tab-content">
-													<div class="tab-pane active" id="portlet_tab_1">
-														alala
+													<div class="tab-pane" id="portlet_tab_1">
+														STATUS PERKARA, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.
 													</div>
 													<div class="tab-pane" id="portlet_tab_2">
 														<p>
 															 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.
 														</p>
 													</div>
-													<div class="tab-pane" id="portlet_tab_3">
-														<p>
-															 Ut wisi enim ad btn-smm veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-														</p>
+													<div class="tab-pane active" id="pihak">
+														@include('sibankum.admin.casePartyTableInlet')
 													</div>
 												</div>
 											</div>
@@ -121,6 +119,4 @@ active open
 						<!-- END Portlet PORTLET-->
 					</div>
 				</div>
-@empty
-@endforelse
 @endsection

@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Sibankum\CaseModel;
 use App\Models\Sibankum\CourtType;
+use App\Models\Sibankum\CaseParty;
 use DB;
 
 class CaseController extends Controller
@@ -95,13 +96,27 @@ class CaseController extends Controller
         $role_id    = $request->user()->role_id;
 
         $case = DB::table('case')
-                ->select('court_type.name as court_name', 'case.court_type_id', 'case.number', 'case.case_number', 'case.work_unit', 'case.principal', 'case.object', 'case.proposal', 'case.address')
+                ->select('case.id as case_id', 'court_type.name as court_name', 'case.court_type_id', 'case.number', 'case.case_number', 'case.work_unit', 'case.principal', 'case.object', 'case.proposal', 'case.address')
                 ->leftJoin('court_type', 'case.court_type_id', '=', 'court_type.id')
                 ->where('case.uuid', '=' ,$uuid)
+                ->first();
+
+        $party_side1 = DB::table('case_party')
+                ->select('case_party.name as case_party_name', 'case_party.description', 'court_party.name as court_party_name')
+                ->leftJoin('court_party', 'case_party.court_party_id', '=', 'court_party.id')
+                ->where('case_party.case_id', '=' , $case->case_id)
+                ->where('court_party.side', '=' , '1')
+                ->get();
+        
+        $party_side2 = DB::table('case_party')
+                ->select('case_party.name as case_party_name', 'case_party.description', 'court_party.name as court_party_name')
+                ->leftJoin('court_party', 'case_party.court_party_id', '=', 'court_party.id')
+                ->where('case_party.case_id', '=' , $case->case_id)
+                ->where('court_party.side', '=' , '2')
                 ->get();
 
         // Tampilkan Form Server
-        return view('sibankum.admin.caseShow', ['case' => $case, 'user' => $user]);
+        return view('sibankum.admin.caseShow', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'user' => $user]);
     
     }
 

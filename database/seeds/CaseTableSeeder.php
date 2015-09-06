@@ -21,7 +21,7 @@ class CaseTableSeeder extends Seeder
 		'number' => '1',
         'work_unit' => 'Tes Unit Kerja',
         'case_number' => '2304/PDT/CPA/2015' ,
-		'principal' => 'Tes Pokok Perkara',
+		'principal' => 'Utang Piutang Modal Usaha',
         'object' => 'Tes Object Perkara',
         'proposal' => 'Tes Pokok Permohonan',
         'address' => 'http://sibankum.pertanian.go.id/sample/case1.pdf'

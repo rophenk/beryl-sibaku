@@ -139,12 +139,12 @@ $addbutton = '<div class="row">
 									<td align="right">
 										<?php /*echo  $optionbutton;*/ ?>
 										<select onchange="if (this.value) window.location.href=this.value" class="table-group-action-input form-control input-inline input-small input-sm">
-											<option value="">Select...</option>
-											<option value="/case/show/<?php echo $uuid; ?>">Show</option>
+											<option value="">Pilih...</option>
+											<option value="/case/show/<?php echo $uuid; ?>">Detail</option>
 											<option value="/case/edit/<?php echo $uuid; ?>">Edit</option>
-											<option value="/case/party/<?php echo $uuid; ?>">Tambah Pihak</option>
+											<!--<option value="/case/party/<?php echo $uuid; ?>">Tambah Pihak</option>
 											<option value="/case/trial-schedule/<?php echo $uuid; ?>">Jadwal Sidang</option>
-											<option value="/case/status/<?php echo $uuid; ?>">Status Perkara</option>
+											<option value="/case/status/<?php echo $uuid; ?>">Status Perkara</option>-->
 										</select>
 
 									</td>
