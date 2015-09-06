@@ -24,7 +24,7 @@ class CaseTableSeeder extends Seeder
 		'principal' => 'Tes Pokok Perkara',
         'object' => 'Tes Object Perkara',
         'proposal' => 'Tes Pokok Permohonan',
-        'url' => 'http://sibankum.pertanian.go.id/sample/case1.pdf'
+        'address' => 'http://sibankum.pertanian.go.id/sample/case1.pdf'
 		]);
     }
 }

@@ -26,7 +26,7 @@ class CreateCase extends Migration
             $table->text('principal')->nullable();
             $table->text('object')->nullable();
             $table->text('proposal')->nullable();
-            $table->text('url')->nullable();
+            $table->text('address')->nullable();
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });

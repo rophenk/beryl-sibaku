@@ -3,8 +3,9 @@
 	<div class="page-header-inner container">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index.html">
-			{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-default.png', 'logo', array('class' => 'logo-default')) !!}
+			<a href="/home">
+			<!--{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-default.png', 'logo', array('class' => 'logo-default')) !!}-->
+			<br /><h4 style="color:white">SIBANKUM</h4>
 			</a>
 			<div class="menu-toggler sidebar-toggler">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->

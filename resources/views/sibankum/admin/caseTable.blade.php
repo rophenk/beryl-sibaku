@@ -17,11 +17,11 @@
 						</li>
 @endsection
 
-@section('settings-active')
+@section('case-active')
 active open
 @endsection
 
-@section('settings-selected')
+@section('case-selected')
 <span class="selected"></span>
 @endsection
 <?php

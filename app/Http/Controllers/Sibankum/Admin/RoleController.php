@@ -105,7 +105,9 @@ class RoleController extends Controller
     public function destroy($id)
     {
         //Menghapus data User
-        DB::table('roles')->where('id', '=' ,$id)->delete();
+        DB::table('roles')
+        ->where('id', '=' ,$id)
+        ->delete();
         return redirect("/roles");
     }
 }

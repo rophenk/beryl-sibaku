@@ -56,8 +56,9 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- END SIDEBAR TOGGLER BUTTON -->
 <!-- BEGIN LOGO -->
 <div class="logo">
-	<a href="index.html">
-	<img src="{{ asset('sbk/admin/assets/admin/layout2/img/logo-big.png') }}" alt=""/>
+	<a href="/index">
+	<img src="{{ asset('sbk/admin/assets/admin/layout2/img/logo-kementan.png') }}" alt=""/>
+	<!--{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-default.png', 'logo', array('class' => 'logo-default')) !!}-->
 	</a>
 </div>
 <!-- END LOGO -->
@@ -83,9 +84,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 		<div class="form-actions">
 			<button type="submit" class="btn btn-success uppercase">Login</button>
-			<label class="rememberme check">
+			<!--<label class="rememberme check">
 			<input type="checkbox" name="remember" value="1"/>Remember </label>
-			<a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+			<a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>-->
 		</div>
 		<!--<div class="login-options">
 			<h4>Or login with</h4>
@@ -422,7 +423,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END REGISTRATION FORM -->
 </div>
 <div class="copyright">
-	 2014 © Metronic. Admin Dashboard Template.
+	 2015 © Kementerian Pertanian Republik Indonesia.
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

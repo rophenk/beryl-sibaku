@@ -8,6 +8,7 @@ use Rhumsaa\Uuid\Exception\UnsatisfiedDependencyException;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Sibankum\CaseModel;
+use App\Models\Sibankum\CourtType;
 use DB;
 
 class CaseController extends Controller
@@ -33,9 +34,30 @@ class CaseController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $user       = $request->user();
+        $role_id    = $request->user()->role_id;
+
+        if($role_id <= 2) {
+
+            // Tampilkan semua data Server
+            $court_type = CourtType::all();
+
+        } else {
+
+            //$instansi_id = $request->user()->instansi_id;
+
+            // Tampilkan data Instansi hanya miliknya
+             /*$court_type = CourtType::where('id', $instansi_id)
+                         ->get();*/
+            $court_type = CourtType::all();
+
+        }
+
+        // Tampilkan Form Server
+        return view('sibankum.admin.caseForm', ['court_type_options' => $court_type, 'user' => $user]);
+    
     }
 
     /**
@@ -46,7 +68,18 @@ class CaseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate the request...
+        $case = new CaseModel;
+        $case->court_type_id= $request->court_type_id;
+        $case->uuid         = Uuid::uuid4();
+        $case->number       = $request->number;
+        $case->work_unit    = $request->work_unit;
+        $case->case_number  = $request->case_number;
+        $case->principal    = $request->principal;
+        $case->object       = $request->object;
+        $case->address      = $request->address;
+        $case->save();
+        return redirect("/case");
     }
 
     /**
@@ -55,9 +88,21 @@ class CaseController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $uuid       = $request->uuid;
+        $user       = $request->user();
+        $role_id    = $request->user()->role_id;
+
+        $case = DB::table('case')
+                ->select('court_type.name as court_name', 'case.court_type_id', 'case.number', 'case.case_number', 'case.work_unit', 'case.principal', 'case.object', 'case.proposal', 'case.address')
+                ->leftJoin('court_type', 'case.court_type_id', '=', 'court_type.id')
+                ->where('case.uuid', '=' ,$uuid)
+                ->get();
+
+        // Tampilkan Form Server
+        return view('sibankum.admin.caseShow', ['case' => $case, 'user' => $user]);
+    
     }
 
     /**
@@ -66,9 +111,35 @@ class CaseController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        $uuid       = $request->uuid;
+        $user       = $request->user();
+        $role_id    = $request->user()->role_id;
+        $instansi_id = $request->user()->instansi_id;
+
+        // Tampilka data Perkara
+        $case = CaseModel::where('uuid', $uuid)
+                                    ->get();
+        
+        if($role_id <= 2) {
+
+            // Tampilkan semua data Perkara
+            $court_type = CourtType::all();
+
+        } else {
+
+            $instansi_id = $request->user()->instansi_id;
+
+            // Tampilkan data Instansi hanya miliknya
+            /*$instansi_options = InstansiModel::where('id', $instansi_id)
+                         ->get();*/
+            $court_type = CourtType::all();
+
+        }
+
+        //Tampilkan Form yang terisi data
+        return view('sibankum.admin.caseFormEdit', ['case' => $case, 'court_type_options' => $court_type, 'user' => $user]);
     }
 
     /**
@@ -78,9 +149,21 @@ class CaseController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        //Validate the request...
+        CaseModel::where('uuid' ,$request->uuid)
+        ->update([
+            'court_type_id' => $request->court_type_id, 
+            'number'        => $request->number,
+            'work_unit'     => $request->work_unit,
+            'case_number'   => $request->case_number,
+            'principal'     => $request->principal,
+            'object'        => $request->object,
+            'proposal'      => $request->proposal,     
+            'address'       => $request->address 
+            ]);
+        return redirect("/case");
     }
 
     /**
@@ -89,8 +172,10 @@ class CaseController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($uuid)
     {
-        //
+        //Menghapus data Server
+        DB::table('case')->where('uuid', '=' ,$uuid)->delete();
+        return redirect("/case");
     }
 }

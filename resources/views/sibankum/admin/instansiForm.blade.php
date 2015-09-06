@@ -1,8 +1,8 @@
 @extends('sibankum.admin.master')
 @section('title', 'Instansi' )
 @section('pagestyle')
-{!! Html::style('simapta/assets/global/css/components-md.css') !!}
-{!! Html::style('simapta/assets/global/css/plugins-md.css') !!}
+{!! Html::style('sbk/admin/assets/global/css/components-md.css') !!}
+{!! Html::style('sbk/admin/assets/global/css/plugins-md.css') !!}
 @endsection
 
 @section('breadcrumb')

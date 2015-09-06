@@ -1,4 +1,4 @@
-@extends('sibankum::admin.master')
+@extends('sibankum.admin.master')
 @section('title', 'Dashboard' )
 
 @section('pagestyle')
