@@ -24,7 +24,8 @@ class CaseTableSeeder extends Seeder
 		'principal' => 'Utang Piutang Modal Usaha',
         'object' => 'Tes Object Perkara',
         'proposal' => 'Tes Pokok Permohonan',
-        'address' => 'http://sibankum.pertanian.go.id/sample/case1.pdf'
+        'address' => 'http://sibankum.pertanian.go.id/sample/case1.pdf',
+        'instansi_id' => '1'
 		]);
     }
 }

@@ -25,6 +25,8 @@ class CreateCaseParty extends Migration
                   ->onDelete('cascade');
             $table->string('name')->nullable();
             $table->text('description')->nullable();
+            $table->integer('case_number')->nullable();
+            $table->integer('instansi_id')->unsigned()->nullable();
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });
