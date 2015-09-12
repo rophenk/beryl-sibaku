@@ -16,6 +16,7 @@ class UserTableSeeder extends Seeder
         'name' => 'Administrator',
         'email' => 'admin@sibankum.com',
         'password' => bcrypt('rahasia'),
+        'instansi_id' => '1',
         'role_id' => '1',
         ]);
     }

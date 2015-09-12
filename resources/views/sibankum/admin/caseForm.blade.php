@@ -93,6 +93,7 @@ active open
 											<span class="help-block">Alamat File, contoh : http://sibankum.pertanian.go.id/file/perkara-1.pdf</span>
 										</div>
 									<div class="form-actions noborder">
+										<input type="hidden" name="instansi_id" value="{{ $user->instansi_id }}">
 										<button type="submit" class="btn blue">Submit</button>
 										<button type="button" class="btn default">Cancel</button>
 									</div>

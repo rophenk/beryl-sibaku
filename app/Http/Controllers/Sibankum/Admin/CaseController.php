@@ -39,7 +39,7 @@ class CaseController extends Controller
     {
         $user       = $request->user();
         $role_id    = $request->user()->role_id;
-
+        
         if($role_id <= 2) {
 
             // Tampilkan semua data Server
@@ -115,7 +115,7 @@ class CaseController extends Controller
                 ->where('court_party.side', '=' , '2')
                 ->get();
 
-        // Tampilkan Form Server
+        // Tampilkan Tabel Pihak
         return view('sibankum.admin.caseShow', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'user' => $user]);
     
     }

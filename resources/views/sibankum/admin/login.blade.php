@@ -57,8 +57,9 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN LOGO -->
 <div class="logo">
 	<a href="/index">
-	<img src="{{ asset('sbk/admin/assets/admin/layout2/img/logo-kementan.png') }}" alt=""/>
-	<!--{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-default.png', 'logo', array('class' => 'logo-default')) !!}-->
+	<!--<img src="{{ asset('sbk/admin/assets/admin/layout2/img/logo-kementan.png') }}" alt=""/>
+	{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-default.png', 'logo', array('class' => 'logo-default')) !!}-->
+	<h1 style="color:#cccccc">SIBANKUM</h1>
 	</a>
 </div>
 <!-- END LOGO -->

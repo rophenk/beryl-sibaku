@@ -42,17 +42,19 @@ class LoginController extends Controller
         /*$credentials = $this->getCredentials($request);
         return $credentials;*/
 
+
+
         $this->validate($request, [
             'email' => 'required|email', 'password' => 'required',
         ]);
 
         $credentials = $this->getCredentials($request);
        
-        
+        //var_dump($credentials);die();
         if (Auth::attempt($credentials, $request->has('remember'))) {
             return redirect()->intended($this->redirectPath());
         }
-
+        
         return redirect($this->loginPath())
             ->withInput($request->only('email', 'remember'))
             ->withErrors([

@@ -106,6 +106,7 @@ active open
 										</div>
 									<div class="form-actions noborder">
 										<input type="hidden" name="_token" value="{{ csrf_token() }}">
+										<input type="hidden" name="instansi_id" value="{{ $user->instansi_id }}">
 										<input type="hidden" name="uuid" value="{{ $case->uuid }}">
 										<button type="submit" class="btn blue">Submit</button>
 										<button type="button" class="btn default">Cancel</button>

@@ -73,6 +73,28 @@ active open
 												@endforelse
 											</select>
 										</div>
+
+										<div class="form-group">
+											<label>Instansi</label>
+											<select class="form-control" name="instansi_id">
+												@forelse ($instansi_options as $instansi)
+												<?php
+													if($instansi->id === $userdb->instansi_id) {
+
+														$selected = ' selected="yes"';
+
+													} else {
+
+														$selected = '';
+
+													}
+												?>
+													<option value="{{ $instansi->id }}"<?php echo $selected; ?>>{{ $instansi->name }}</option>
+												@empty
+													<option>Belum ada data Instansi</option>
+												@endforelse
+											</select>
+										</div>
 										<div class="form-group form-md-line-input form-md-floating-label">
 											<input type="password" class="form-control" id="password" name="newpassword">
 											<label for="password">Password</label>
