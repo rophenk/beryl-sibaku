@@ -21,7 +21,7 @@ class FileController extends Controller
     {
         $user = $request->user();
         $case_uuid = $request->uuid;
-        return view('sibankum.admin.UploadForm2', ['case_uuid' => $case_uuid, 'user' => $user]);
+        return view('sibankum.admin.uploadForm2', ['case_uuid' => $case_uuid, 'user' => $user]);
     }
 
     public function upload(Request $request) {
