@@ -111,6 +111,7 @@ var UIBlockUI = function() {
         });
     }
 
+
     var handleSample4 = function() {
 
         $('#blockui_sample_4_1').click(function() {
@@ -149,6 +150,84 @@ var UIBlockUI = function() {
         });
     }
 
+    var pihak1 = function() {
+
+        $('#blockui_sample_3_1_0').click(function() {
+            Metronic.blockUI({
+                target: '#pihak1',
+                overlayColor: 'none',
+                cenrerY: true,
+                animate: true
+            });
+
+            window.setTimeout(function() {
+                Metronic.unblockUI('#pihak1');
+            }, 2000);
+        });
+
+        $('#blockui_sample_3_1').click(function() {
+            Metronic.blockUI({
+                target: '#blockui_sample_3_1_element',
+                overlayColor: 'none',
+                animate: true
+            });
+        });
+
+        $('#blockui_sample_3_1_1').click(function() {
+            Metronic.unblockUI('#blockui_sample_3_1_element');
+        });
+
+        $('#blockui_sample_3_2').click(function() {
+            Metronic.blockUI({
+                target: '#blockui_sample_3_2_element',
+                boxed: true
+            });
+        });
+
+        $('#blockui_sample_3_2_1').click(function() {
+            Metronic.unblockUI('#blockui_sample_3_2_element');
+        });
+    }
+
+    var pihak2 = function() {
+
+        $('#blockui_sample_3_1_0').click(function() {
+            Metronic.blockUI({
+                target: '#pihak2',
+                overlayColor: 'none',
+                cenrerY: true,
+                animate: true
+            });
+
+            window.setTimeout(function() {
+                Metronic.unblockUI('#pihak2');
+            }, 2000);
+        });
+
+        $('#blockui_sample_3_1').click(function() {
+            Metronic.blockUI({
+                target: '#blockui_sample_3_1_element',
+                overlayColor: 'none',
+                animate: true
+            });
+        });
+
+        $('#blockui_sample_3_1_1').click(function() {
+            Metronic.unblockUI('#blockui_sample_3_1_element');
+        });
+
+        $('#blockui_sample_3_2').click(function() {
+            Metronic.blockUI({
+                target: '#blockui_sample_3_2_element',
+                boxed: true
+            });
+        });
+
+        $('#blockui_sample_3_2_1').click(function() {
+            Metronic.unblockUI('#blockui_sample_3_2_element');
+        });
+    }
+
 
     return {
         //main function to initiate the module
@@ -158,7 +237,9 @@ var UIBlockUI = function() {
             handleSample2();
             handleSample3();
             handleSample4();
-
+            pihak1();
+            pihak2();
+            
         }
 
     };

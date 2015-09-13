@@ -120,3 +120,87 @@ active open
 					</div>
 				</div>
 @endsection
+@section('pluginscript')
+{!! Html::script('sbk/admin/assets/admin/pages/scripts/ui-blockui.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/select2/select2.min.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/datatables/media/js/jquery.dataTables.min.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') !!}
+@endsection
+
+@section('pagescript')
+{!! Html::script('sbk/admin/assets/admin/pages/scripts/table-managed.js') !!}
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+jQuery(document).ready(function() {       
+   Metronic.init(); // init metronic core components
+   Layout.init(); // init current layout
+   Demo.init(); // init demo features
+   TableManaged.init();
+   UIBlockUI.init();
+});
+</script>
+<script>
+var count = 0;
+
+$(document).on('click', '.new-row', function() {
+
+    count++;
+
+    var name = $('#newlink input[name=name]').val();
+    var description = $('#newlink input[name=description]').val();
+    var court_party_id = $('#newlink select[name=court_party_id]').val();
+
+    if ($('input[name=name]').val().length > 2 && $('input[name=description]').val().length > 2) {
+
+        $('<li class="not-saved">' +
+        	 name + ' : ' + description +
+            '<input type="hidden" name="rows[' + count + '][name]" value="' + name + '">' +
+            '<input type="hidden" name="rows[' + count + '][description]" value="' + description + '">' +
+            '<input type="hidden" name="rows[' + count + '][court_party_id]" value="' + court_party_id + '">' +
+            '</li>').appendTo('#link-list').hide().fadeIn(280);
+
+        $('input[name=name]').val('');
+        $('input[name=description]').val('');
+        $('select[name=court_party_id]').val('');
+
+    } else {
+
+        console.log('At least 3 characters for each field required!');
+
+    }
+
+});
+</script>
+<script>
+var count = 0;
+
+$(document).on('click', '.new-row2', function() {
+
+    count++;
+
+    var name2 = $('#newlink2 input[name=name2]').val();
+    var description2 = $('#newlink2 input[name=description2]').val();
+    var court_party_id2 = $('#newlink2 select[name=court_party_id2]').val();
+
+    if ($('input[name=name2]').val().length > 2 && $('input[name=description2]').val().length > 2) {
+
+        $('<li class="not-saved">' +
+        	 name2 + ' : ' + description2 +
+            '<input type="hidden" name="rows[' + count + '][name]" value="' + name2 + '">' +
+            '<input type="hidden" name="rows[' + count + '][description]" value="' + description2 + '">' +
+            '<input type="hidden" name="rows[' + count + '][court_party_id]" value="' + court_party_id2 + '">' +
+            '</li>').appendTo('#link-list2').hide().fadeIn(280);
+
+        $('input[name=name2]').val('');
+        $('input[name=description2]').val('');
+        $('select[name=court_party_id2]').val('');
+        console.log('Name : ' + name2);
+    } else {
+
+        console.log('At least 3 characters for each field required!');
+
+    }
+
+});
+</script>
+@endsection

@@ -73,6 +73,10 @@ $addbutton = false;
 									<th class="table-checkbox">
 										<input type="checkbox" class="group-checkable" data-set="#instansi .checkboxes"/>
 									</th>
+
+									<th>
+										 ID
+									</th>
 									<th>
 										 Nama Instansi
 									</th>
@@ -108,6 +112,9 @@ $addbutton = false;
 										<input type="checkbox" class="checkboxes" value="1"/>
 									</td>
 									<td>
+										 {{ $instansi->id }}
+									</td>
+									<td>
 										 {{ $instansi->name }}
 									</td>
 									<td>
@@ -119,7 +126,7 @@ $addbutton = false;
 								</tr>
 								@empty
 								<tr class="odd gradeX">
-									<td colspan="6">
+									<td colspan="5">
 										<center><strong>Belum ada Data</strong></center>
 									</td>
 								</tr>

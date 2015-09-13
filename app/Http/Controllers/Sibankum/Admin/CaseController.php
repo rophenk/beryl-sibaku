@@ -22,11 +22,30 @@ class CaseController extends Controller
     public function index(Request $request)
     {
         $user       = $request->user();
+        $role_id    = $request->user()->role_id;
         // Tampilkan semua data Instansi
-        $case = DB::table('case')
+        
+        if($role_id <= 2) {
+
+            // Tampilkan semua data Instansi
+             $case = DB::table('case')
                 ->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'court_type.id as court_type_id' , 'court_type.name as court_type')
                 ->join('court_type', 'case.court_type_id', '=', 'court_type.id')
                 ->get();
+
+        } else {
+
+            $instansi_id = $request->user()->instansi_id;
+
+            // Tampilkan sesuai data Instansi user tersebut
+            $case = DB::table('case')
+                ->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'court_type.id as court_type_id' , 'court_type.name as court_type')
+                ->join('court_type', 'case.court_type_id', '=', 'court_type.id')
+                ->where('instansi_id', '=', $instansi_id)
+                ->get();
+
+        }
+        
         return view('sibankum.admin.caseTable', ['case' => $case, 'user' => $user]);
     }
 
@@ -78,7 +97,9 @@ class CaseController extends Controller
         $case->case_number  = $request->case_number;
         $case->principal    = $request->principal;
         $case->object       = $request->object;
+        $case->proposal     = $request->proposal;
         $case->address      = $request->address;
+        $case->instansi_id  = $request->instansi_id;
         $case->save();
         return redirect("/case");
     }
@@ -96,7 +117,7 @@ class CaseController extends Controller
         $role_id    = $request->user()->role_id;
 
         $case = DB::table('case')
-                ->select('case.id as case_id', 'court_type.name as court_name', 'case.court_type_id', 'case.number', 'case.case_number', 'case.work_unit', 'case.principal', 'case.object', 'case.proposal', 'case.address')
+                ->select('case.id as case_id', 'case.uuid as case_uuid', 'court_type.name as court_name', 'case.court_type_id', 'case.number', 'case.case_number', 'case.work_unit', 'case.principal', 'case.object', 'case.proposal', 'case.address')
                 ->leftJoin('court_type', 'case.court_type_id', '=', 'court_type.id')
                 ->where('case.uuid', '=' ,$uuid)
                 ->first();
@@ -114,9 +135,19 @@ class CaseController extends Controller
                 ->where('case_party.case_id', '=' , $case->case_id)
                 ->where('court_party.side', '=' , '2')
                 ->get();
+                
+        $list_party1 = DB::table('court_party')
+                ->select('id', 'name')
+                ->where('side', '=', '1')
+                ->get();
+
+        $list_party2 = DB::table('court_party')
+                ->select('id', 'name')
+                ->where('side', '=', '2')
+                ->get();
 
         // Tampilkan Tabel Pihak
-        return view('sibankum.admin.caseShow', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'user' => $user]);
+        return view('sibankum.admin.caseShow', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'list_party1' => $list_party1, 'list_party2' => $list_party2, 'user' => $user]);
     
     }
 
@@ -193,4 +224,14 @@ class CaseController extends Controller
         DB::table('case')->where('uuid', '=' ,$uuid)->delete();
         return redirect("/case");
     }
+
+    /**
+       * Display a listing of the resource.
+       * @Post("test", as="home.test")
+       * @return Response
+       */
+      public function test()
+      {
+          return 'test';
+      }
 }
