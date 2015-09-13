@@ -375,3 +375,18 @@ Route::post('caseparty/store', [
 	'uses' => 'Sibankum\Admin\CasePartyController@store',
 	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
 ]);
+
+/*
+* Route Untuk Upload File 
+*/
+Route::get('file/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\FileController@index',
+	'roles' => ['administrator', 'manager'] // Only an administrator can access this route
+]);
+Route::post('file/upload', [
+	'as' => 'file.upload',
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\FileController@upload',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);

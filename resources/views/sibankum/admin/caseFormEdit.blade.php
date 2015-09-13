@@ -104,6 +104,10 @@ active open
 											<label for="alias">Address</label>
 											<span class="help-block">Alamat File, contoh : http://sibankum.pertanian.go.id/file/perkara-1.pdf</span>
 										</div>
+										<div class="form-group form-md-line-input form-md-floating-label">
+											<a href="/file/{{ $case->uuid }}" class="btn green" target="_blank">Upload File</a>
+											<label for="upload">Upload File terlebih dahulu, lalu salin tautan (copy paste) lokasi file pada kolom : <strong>Address</strong></label>
+										</div>
 									<div class="form-actions noborder">
 										<input type="hidden" name="_token" value="{{ csrf_token() }}">
 										<input type="hidden" name="instansi_id" value="{{ $user->instansi_id }}">

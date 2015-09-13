@@ -92,6 +92,10 @@ active open
 											<label for="alias">Address</label>
 											<span class="help-block">Alamat File, contoh : http://sibankum.pertanian.go.id/file/perkara-1.pdf</span>
 										</div>
+										<div class="form-group form-md-line-input form-md-floating-label">
+											<a href="/file" class="btn green" target="_blank">Upload File</a>
+											<label for="upload">Upload File terlebih dahulu, lalu salin tautan (copy paste) lokasi file pada kolom : <strong>Address</strong></label>
+										</div>
 									<div class="form-actions noborder">
 										<input type="hidden" name="instansi_id" value="{{ $user->instansi_id }}">
 										<button type="submit" class="btn blue">Submit</button>
