@@ -98,13 +98,16 @@ $(document).ready( function () {
                     @forelse ($data as $data)
                       <?php 
                         $materi = '';
-                        if($data->court_type_id = '1') {
+                        if($data->id_jenis_perkara = '1') {
                           $materi = $data->principal;
-                        }elseif($data->court_type_id = '2') {
+                        }
+                        if($data->id_jenis_perkara = '2') {
                           $materi = $data->object;
-                        }elseif($data->court_type_id = '3') {
+                        }
+                        if($data->id_jenis_perkara = '3') {
                           $materi = $data->proposal;
-                        }elseif($data->court_type_id = '4') {
+                        }
+                        if($data->id_jenis_perkara = '4') {
                           $materi = $data->proposal;
                         }
                       ?>
@@ -112,11 +115,11 @@ $(document).ready( function () {
                           <td>{{ $data->court_type }}</td>
                           <td>{{ $data->work_unit }}</td>
                           <td>{{ $data->case_number }}</td>
-                          <td><?php echo $materi; ?>{{ $data->court_type_id }}</td>
+                          <td><?php echo $materi; ?></td>
                       </tr>
                     @empty
                     <tr>
-                      <td colspan="2">
+                      <td colspan="4">
                         <center><strong>Belum ada Data</strong></center>
                       </td>
                     </tr>

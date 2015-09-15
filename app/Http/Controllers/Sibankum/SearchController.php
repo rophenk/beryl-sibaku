@@ -56,14 +56,13 @@ class SearchController extends Controller
     {
         // Menampilkan 6 Data Terbaru
         $data = DB::table('case')
-                    ->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'case.court_type_id' , 'court_type.name as court_type')
+                    ->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'case.court_type_id' , 'case.court_type_id as id_jenis_perkara' , 'court_type.name as court_type')
                     ->leftjoin('court_type', 'case.court_type_id', '=', 'court_type.id')
                     ->where('principal' , 'LIKE' , "%{$request->keyword}%")
                     ->orWhere('object', 'LIKE' , "%{$request->keyword}%" )
                     ->orWhere('proposal', 'LIKE' , "%{$request->keyword}%")
                     ->orWhere('case_number', 'LIKE' , "%{$request->keyword}%")
                     ->get();
-        var_dump($data);
         return view('sibankum.result', ['data' => $data]);
     }
 
