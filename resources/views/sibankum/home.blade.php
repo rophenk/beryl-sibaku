@@ -10,6 +10,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {!! Html::style('sbk/assets/styles/main.css') !!}
     {!! Html::script('sbk/vendors/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') !!}<!-- Modernizr -->    
+    <script type="text/javascript">
+      function required()
+      {
+        var empt = document.forms["search"]["keyword"].value;
+        if (empt == "")
+        {
+          alert("Kata Kunci Tidah Boleh Kosong");
+          return false;
+        }
+        else 
+        {
+          return true; 
+        }
+      }
+                  
+    </script>
   </head>
   <body><!--[if lt IE 8]>
     <p class="browsehappy">
@@ -124,7 +140,7 @@
         <header id="ryl-home-header" class="clearfix ryl-home-header-style-2">
           <div class="container-fluid">
             <div class="row"></div>
-            <div class="col-md-4"><a href="index2.html" class="ryl-madrin-brand">
+            <div class="col-md-4"><a href="/index" class="ryl-madrin-brand">
                 <div class="ryl-madrin-logo-2"></div>
                 <h4 class="ryl-light-heading"><center>SIBANKUM</center></h4></a></div>
             <div class="ryl-home-header-right-side col-md-8 visible-md visible-lg">
@@ -142,10 +158,11 @@
           <div class="ryl-cell-middle text-center"><b class="ryl-fs-1">SISTEM INFORMASI BANTUAN HUKUM</b>
             <!--<hr class="ryl-margin-bottom-35">-->
             <p class="ryl-fs-4 ryl-fw-medium">Mesin Pencari Dokumen Bantuan Hukum</p>
-            <form class="ryl-form-input-style-1">
+            <form class="ryl-form-input-style-1" action="/result" method="post" name="search" onsubmit="required()">
+              {!! csrf_field() !!}
                   <div class="row">
                     <div class="col-xs-12 text-center">
-                      <input type="text" placeholder="Kata Kunci*"/>
+                      <input type="text" name="keyword" placeholder="Kata Kunci*"/>
                     </div>
                     <div class="col-xs-12 text-center ryl-submit">
                       <button class="ryl-btn-2">SEARCH</button>
@@ -241,8 +258,8 @@
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-case-study-parallax-background-style-1 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
-            <h3>Studi Kasus</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. </p>
+            <h3>Produk Hukum Pertanian</h3>
+            <p>Produk hukum pertanian terbagi menjadi dua, Undang-Undang dan Peraturan pemerintah.</p>
             <hr/>
           </div>
         </header>
@@ -256,27 +273,55 @@
               <div class="ryl-text-carousel has-nav owl-carousel has-index">
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
-                    <p>Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum. Sed eget velit ipsum. Duis in tortor scelerisque felis mattis imperdiet. Donec at libero tellus. Suspendisse consectetur consectetur bibendum.</p>
+                    <p>Undang-Undang Nomor 12 Tahun 1992 tentang Budidaya Tanaman.</p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
-                    <p>Illo, recusandae quia alias. Donec at libero tellus. Suspendisse consectetur consectetur bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Undang-Undang Nomor 16 Tahun 1992 tentang Karantina Hewan, Ikan da Tumbuhan</p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
-                    <p>Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum. Sed eget velit ipsum. Duis in tortor scelerisque felis mattis imperdiet. Donec at libero tellus. Suspendisse consectetur consectetur bibendum.</p>
+                    <p>Undang-Undang Nomor 29 Tahun 2000 tentang Perlindungan Varietas Tanaman</p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
-                    <p>Illo, recusandae quia alias. Donec at libero tellus. Suspendisse consectetur consectetur bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Undang-Undang Nomor 18 Tahun 2004 tentang Perkebunan</p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
-                    <p>Lorem ipsum dolor sit amet,Donec at libero tellus. Suspendisse consectetur consectetur bibendum. consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, recusandae quia alias.</p>
+                    <p>Undang-Undang Nomor 4 Tahun 2006 tentang Pengesahan <em>International Treaty On Plant Genetic Resources For Food and Agriculture</em> (Perjanjian Mengenai Sumber Daya Genetik Tanaman Untuk Pangan dan Pertanian)</p>
+                  </div>
+                </div>
+                <div class="ryl-text-carousel-item">
+                  <div class="ryl-text-carousel-content">
+                    <p>Undang-Undang Nomor 16 Tahun 2006 tentang Sistem Penyuluhan Pertanian, Perikanan dan Kehutanan</p>
+                  </div>
+                </div>
+                <div class="ryl-text-carousel-item">
+                  <div class="ryl-text-carousel-content">
+                    <p>Undang-Undang Nomor 18 Tahun 2009 tentang Peternakan dan Kesehatan Hewan</p>
+                  </div>
+                </div>
+                <div class="ryl-text-carousel-item">
+                  <div class="ryl-text-carousel-content">
+                    <p>Undang-Undang Nomor 41 Tahun 2009 tentang Perlindungan Lahan Pertanian Pangan Berkelanjutan</p>
+                  </div>
+                  <div class="ryl-text-carousel-content">
+                    <p>Undang-Undang Nomor 13 Tahun 2010 tentang Hortikultura</p>
+                  </div>
+                </div>
+                <div class="ryl-text-carousel-item">
+                  <div class="ryl-text-carousel-content">
+                    <p>Undang-Undang Nomor 18 Tahun 2012 tentang Pangan</p>
+                  </div>
+                </div>
+                <div class="ryl-text-carousel-item">
+                  <div class="ryl-text-carousel-content">
+                    <p>Undang-Undang Nomor 19 Tahun 2013 tentang Perlindungan dan Pemberdayaan Petani</p>
                   </div>
                 </div>
               </div>
@@ -649,7 +694,7 @@ Jakarta 12550</span><span class="ryl-info-item"><i class="ryl-icon-inline-text i
             <li><a href="#"><i class="ryl-icon-circle-border-3 icon-twitter"></i></a></li>
             <li><a href="#"><i class="ryl-icon-circle-border-3 icon-dribbble"></i></a></li>
           </ul>
-          <div class="ryl-footer-content">© 2014 - ALL RIGHTS RESERVED BY <a href="index2.html">SIBANKUM</a></div>
+          <div class="ryl-footer-content">© 2014 - ALL RIGHTS RESERVED BY <a href="/index">SIBANKUM</a></div>
         </div>
       </footer>
     </div>
