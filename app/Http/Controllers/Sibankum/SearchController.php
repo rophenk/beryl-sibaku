@@ -85,11 +85,37 @@ class SearchController extends Controller
     public function show($uuid)
     {
         // Menampilkan Detail data
-        $data = DB::table('data')
-                    ->where('uuid', $uuid)
-                    ->get();
+        $case = DB::table('case')
+                ->select('case.id as case_id', 'case.uuid as case_uuid', 'court_type.name as court_name', 'case.court_type_id', 'case.number', 'case.case_number', 'case.work_unit', 'case.principal', 'case.object', 'case.proposal', 'case.address')
+                ->leftJoin('court_type', 'case.court_type_id', '=', 'court_type.id')
+                ->where('case.uuid', '=' ,$uuid)
+                ->first();
 
-         return view('simapta.template.materialdesign.show', ['data' => $data]);
+        $party_side1 = DB::table('case_party')
+                ->select('case_party.name as case_party_name', 'case_party.description', 'court_party.name as court_party_name')
+                ->leftJoin('court_party', 'case_party.court_party_id', '=', 'court_party.id')
+                ->where('case_party.case_id', '=' , $case->case_id)
+                ->where('court_party.side', '=' , '1')
+                ->get();
+        
+        $party_side2 = DB::table('case_party')
+                ->select('case_party.name as case_party_name', 'case_party.description', 'court_party.name as court_party_name')
+                ->leftJoin('court_party', 'case_party.court_party_id', '=', 'court_party.id')
+                ->where('case_party.case_id', '=' , $case->case_id)
+                ->where('court_party.side', '=' , '2')
+                ->get();
+                
+        $list_party1 = DB::table('court_party')
+                ->select('id', 'name')
+                ->where('side', '=', '1')
+                ->get();
+
+        $list_party2 = DB::table('court_party')
+                ->select('id', 'name')
+                ->where('side', '=', '2')
+                ->get();
+
+         return view('sibankum.detail', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'list_party1' => $list_party1, 'list_party2' => $list_party2]);
     }
 
     /**

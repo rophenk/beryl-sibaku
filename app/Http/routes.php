@@ -22,6 +22,7 @@ Route::get('/lala', function () {
 Route::resource('/', 'Sibankum\SibankumController');
 Route::get('index', 'Sibankum\SibankumController@demo');
 Route::post('result', 'Sibankum\SearchController@result');
+Route::get('detail/{uuid?}', 'Sibankum\SearchController@show');
 
 Route::get('login', 'LoginController@login');
 Route::post('login', 'LoginController@postLogin');

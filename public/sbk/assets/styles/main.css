@@ -4556,7 +4556,7 @@ input, textarea {
   background-image: url("../images/testimonial-bg2.jpg"); }
 
 .ryl-testimonial-parallax-background-style-3 {
-  background-image: url("../images/testimonial-bg3.jpg"); }
+  background-image: url("../images/testimonial-bg4.jpg"); }
 
 .ryl-twitter-parallax-background-style-1 {
   background-image: url("../images/twitter-bg1.jpg"); }
@@ -4568,7 +4568,7 @@ input, textarea {
   background-image: url("../images/contact-bg.jpg"); }
 
 .ryl-case-study-parallax-background-style-1 {
-  background-image: url("../images/case-study-bg3.jpg"); }
+  background-image: url("../images/case-study-bg4.jpg"); }
 
 /* Nav */
 #ryl-main-hamburger {
@@ -5393,9 +5393,9 @@ body {
   position: relative;
   display: block;
   float: left;
-  width: 25%;
-  margin-left: -1px;
-  text-align: center;
+  width: 90%;
+  margin-left: 1px;
+  text-align: left;
   border: 1px solid #DDDDDD;
   cursor: pointer; }
   .ryl-pricing-table-item:before, .ryl-pricing-table-item:after {
@@ -5404,7 +5404,7 @@ body {
   .ryl-pricing-table-item:after {
     clear: both; }
   .ryl-pricing-table-item .ryl-title {
-    font-weight: 700; }
+    font-weight: 400; }
   .ryl-pricing-table-item .ryl-price {
     background-color: #222222;
     color: #FFFFFF;
@@ -5430,7 +5430,7 @@ body {
       font-size: 30px;
       line-height: 100px; }
     .ryl-pricing-table-item .ryl-price {
-      font-size: 40px;
+      font-size: 20px;
       line-height: 80px; }
     .ryl-pricing-table-item ul li {
       line-height: 70px;

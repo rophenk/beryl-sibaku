@@ -28,6 +28,16 @@ class SibankumController extends Controller {
 	}
 
 	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function homelogin()
+	{
+		return view("sibankum.homelogin");
+	}
+
+	/**
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response

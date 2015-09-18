@@ -92,6 +92,7 @@ $(document).ready( function () {
                           <th>Unit Kerja</th>
                           <th>Nomor Perkara</th>
                           <th>Materi</th>
+                          <th>Opsi</th>
                       </tr>
                   </thead>
                   <tbody>
@@ -116,12 +117,15 @@ $(document).ready( function () {
                           <td>{{ $data->work_unit }}</td>
                           <td>{{ $data->case_number }}</td>
                           <td><?php echo $materi; ?></td>
+                          <td><a href="/detail/{{ $data->uuid }}"><button class="ryl-btn">Detil</button></a></td>
                       </tr>
                     @empty
                     <tr>
-                      <td colspan="4">
-                        <center><strong>Belum ada Data</strong></center>
-                      </td>
+                      <td></td>
+                          <td>BELUM ADA DATA</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
                     </tr>
                     @endforelse
                   </tbody>

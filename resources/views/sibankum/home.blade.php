@@ -183,76 +183,6 @@
             <hr/>
           </div>
         </header>
-        <!--<div class="container">
-          <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12 ryl-section-item">
-              <section id="team">
-              <div class="ryl-team-member-style-2 clearfix">
-                <header>
-                  <h5>JOHN WHITE</h5><i>Founder</i>
-                </header>
-                <div class="ryl-image"><img src="{{ asset('sbk/assets/images/team1.jpg') }}" alt="Team Member" class="img-responsive"/></div>
-                <p>Seded ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p>
-                <ul class="ryl-social">
-                  <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-flickr"></i></a></li>
-                </ul>
-              </div>
-            </section>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 ryl-section-item">
-              <div class="ryl-team-member-style-2 clearfix">
-                <header>
-                  <h5>ROBERT SMITH</h5><i>Co-Founder</i>
-                </header>
-                <div class="ryl-image"><img src="{{ asset('sbk/assets/images/team2.jpg') }}" alt="Team Member" class="img-responsive"/></div>
-                <p>Seded ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p>
-                <ul class="ryl-social">
-                  <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-flickr"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 ryl-section-item">
-              <div class="ryl-team-member-style-2 clearfix">
-                <header>
-                  <h5>CLINT REID</h5><i>Lawyer</i>
-                </header>
-                <div class="ryl-image"><img src="{{ asset('sbk/assets/images/team3.jpg') }}" alt="Team Member" class="img-responsive"/></div>
-                <p>Seded ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p>
-                <ul class="ryl-social">
-                  <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-flickr"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 ryl-section-item">
-              <div class="ryl-team-member-style-2 clearfix">
-                <header>
-                  <h5>JACK SMITH</h5><i>Lawyer</i>
-                </header>
-                <div class="ryl-image"><img src="{{ asset('sbk/assets/images/team4.jpg') }}" alt="Team Member" class="img-responsive"/></div>
-                <p>Seded ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p>
-                <ul class="ryl-social">
-                  <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-flickr"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>-->
       </section>
       <section id="case-study">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-case-study-parallax-background-style-1 ryl-parallax-bg"></div>
@@ -274,54 +204,67 @@
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 12 Tahun 1992 tentang Budidaya Tanaman.</p>
+                    <p><a href="/undang-undang/UU-NO-12-Tahun-1992.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 16 Tahun 1992 tentang Karantina Hewan, Ikan da Tumbuhan</p>
+                    <p><a href="/undang-undang/UU-NO-16-Tahun-1992.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 29 Tahun 2000 tentang Perlindungan Varietas Tanaman</p>
+                    <p><a href="/undang-undang/UU-NO-29-Tahun-2000.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 18 Tahun 2004 tentang Perkebunan</p>
+                    <p><a href="/undang-undang/UU-NO-18-Tahun-2004.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 4 Tahun 2006 tentang Pengesahan <em>International Treaty On Plant Genetic Resources For Food and Agriculture</em> (Perjanjian Mengenai Sumber Daya Genetik Tanaman Untuk Pangan dan Pertanian)</p>
+                    <p><a href="/undang-undang/UU-NO-4-Tahun-2006.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 16 Tahun 2006 tentang Sistem Penyuluhan Pertanian, Perikanan dan Kehutanan</p>
+                    <p><a href="/undang-undang/UU-NO-16-Tahun-2006.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 18 Tahun 2009 tentang Peternakan dan Kesehatan Hewan</p>
+                    <p><a href="/undang-undang/UU-NO-18-Tahun-2009.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 41 Tahun 2009 tentang Perlindungan Lahan Pertanian Pangan Berkelanjutan</p>
+                    <p><a href="/undang-undang/UU-NO-41-Tahun-2009.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
+                </div>
+                <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 13 Tahun 2010 tentang Hortikultura</p>
+                    <p><a href="/undang-undang/UU-NO-13-Tahun-2010.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 18 Tahun 2012 tentang Pangan</p>
+                    <p><a href="/undang-undang/UU-NO-18-Tahun-2012.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
                     <p>Undang-Undang Nomor 19 Tahun 2013 tentang Perlindungan dan Pemberdayaan Petani</p>
+                    <p><a href="/undang-undang/UU-NO-19-Tahun-2013.pdf" target="_blank"><button class="ryl-btn-2">Unduh</button></a></p>
                   </div>
                 </div>
               </div>
@@ -694,7 +637,7 @@ Jakarta 12550</span><span class="ryl-info-item"><i class="ryl-icon-inline-text i
             <li><a href="#"><i class="ryl-icon-circle-border-3 icon-twitter"></i></a></li>
             <li><a href="#"><i class="ryl-icon-circle-border-3 icon-dribbble"></i></a></li>
           </ul>
-          <div class="ryl-footer-content">© 2014 - ALL RIGHTS RESERVED BY <a href="/index">SIBANKUM</a></div>
+          <div class="ryl-footer-content">© 2015 - HAK CIPTA <a href="/index">KEMENTERIAN PERTANIAN REPUBLIK INDONESIA</a></div>
         </div>
       </footer>
     </div>
