@@ -1,4 +1,20 @@
-1;10;Test Work Unit;10/X/PDT/2015;Test Principal;Tes Objek Perkara1;;http://ppid.pertanian.go.id/library/content/file/100/0000/0000/0733/ed79febcd4fce1e29c14ff48ebca05ad5099-26-09-2013-11-39-20.pdf
-2;3;Unit Kerja TUN;3/OKT/TUN/2015;;Tes Objek Perkara;;http://localhost/datasimapta/pia/data/files/laravel-5.pdf
-3;2;Unit Kerja Mahkamah Agung;2/10/MA/2015;;;Tes Permohonan;http://localhost/datasimapta/pia/data/files/laravel-5-alfa.pdf
-4;15;Unit Kerja Mahkamah Konstitusi;15/Oktober/MK/2015;;;Permohonan MA;http://localhost/datasimapta/pia/data/files/laravel-5-beta.pdf
+1;1;Undang Undang;Nomor 41 Tahun 2014;Perubahan atas Undang-Undang No.18 Tahun 2009 tentang Peternakan & Kesehatan Hewan;;;http://perundangan.pertanian.go.id/admin/uu/UU%20Nomor%2041%20Tahun%202014%20Perubahan%20UU%20No.18%20Tahun%2009%20Peternakan%20&%20Keswan.pdf
+1;2;Undang Undang;Nomor 39 Tahun 2014;Perkebunan;;;http://perundangan.pertanian.go.id/admin/uu/UU%20Nomor%2039%20Tahun%202014%20Perkebunan.pdf
+1;3;Undang Undang;NOMOR 19 TAHUN 2013;PERLINDUNGAN DAN PEMBERDAYAAN PETANI;;;http://perundangan.pertanian.go.id/admin/uu/UU%20No.19%20Tahun%202013%20Perlindungan%20&%20Pemberdayaan%20Petani.pdf
+1;4;Undang Undang;NOMOR 12 TAHUN 2011;Pembentukan Peraturan Perundang-undangan;;;http://perundangan.pertanian.go.id/admin/uu/UU-12-11.pdf
+1;5;Undang Undang;NOMOR 18 TAHUN 2012;Pangan;;;http://perundangan.pertanian.go.id/admin/uu/UU-18-12.pdf
+1;6;Undang Undang;NOMOR 13 TAHUN 2010;Hortikultura;;;http://perundangan.pertanian.go.id/admin/uu/UU-13-10.pdf
+1;7;Undang Undang;NOMOR 41 TAHUN 2009;Perlindungan Lahan Pertanian Pangan Berkelanjutan;;;http://perundangan.pertanian.go.id/admin/uu/UU-41-09.pdf
+1;8;Undang Undang;NOMOR 12 TAHUN 1992;Sistem Budidaya Tanaman;;;http://perundangan.pertanian.go.id/admin/uu/UU-12-92.pdf
+1;9;Undang Undang;NOMOR 14 TAHUN 2008;Keterbukaan Informasi Publik;;;http://perundangan.pertanian.go.id/admin/uu/UU-14-08.pdf
+1;10;Undang Undang;NOMOR 31 TAHUN 2004;Perikanan;;;http://perundangan.pertanian.go.id/admin/uu/UU-31-04.pdf
+2;11;Peraturan Pemerintah;NOMOR 25 TAHUN 2014;;Pemberian Fasilitas dan Intensif Usaha Hortikultura;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP-25-14.pdf
+2;12;Peraturan Pemerintah;NOMOR 31 TAHUN 2009;;PERLINDUNGAN WILAYAH GEOGRAFIS PENGHASIL PRODUK PERKEBUNAN SPESIFIK LOKASIPERLINDUNGAN WILAYAH GEOGRAFIS PENGHASIL PRODUK PERKEBUNAN SPESIFIK LOKASI;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP%20No.31%20Tahun%202009%20Geografis%20Penghasil.pdf
+2;13;Peraturan Pemerintah;NOMOR 28 TAHUN 2004;;KEAMANAN, MUTU DAN GIZI PANGAN;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP%20No.28%20Tahun%202004%20Keamanan,%20Mutu,%20&%20Gizi%20Pangan.pdf
+2;14;Peraturan Pemerintah;NOMOR 14 TAHUN 2004;;Syarat dan Tata Cara Pengalihan Perlindungan Varietas Tanaman dan Penggunaan Varietas Yang Dilindungi Oleh Pemerintah;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP-14-04.pdf
+2;15;Peraturan Pemerintah;NOMOR 82 TAHUN 2000;;Karantina Hewan;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP-82-00.pdf
+2;16;Peraturan Pemerintah;NOMOR 81 TAHUN 2001;;Alat dan Mesin Budidaya Tanaman;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP-81-01.pdf
+2;17;Peraturan Pemerintah;NOMOR 78 TAHUN 1992;;Obat Hewan;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP-78-92.pdf
+2;18;Peraturan Pemerintah;NOMOR 74 TAHUN 2001;;Pengelolaan Bahan Berbahaya dan Beracun;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP-74-01.pdf
+2;19;Peraturan Pemerintah;NOMOR 69 TAHUN 1999;;Label dan Iklan Pangan;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP-69-99.pdf
+3;20;Peraturan Pemerintah;NOMOR 68 TAHUN 2002;;Ketahanan Pangan;;http://perundangan.pertanian.go.id/admin/p_pemerintah/PP-68-02.pdf
