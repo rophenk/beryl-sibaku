@@ -23,8 +23,11 @@ class CreateCaseStatus extends Migration
             $table->foreign('court_level_id')
                   ->references('id')->on('court_level')
                   ->onDelete('cascade');
+            $table->text('status')->nullable();
             $table->text('verdict')->nullable();
             $table->text('description')->nullable();
+            $table->integer('case_number');
+            $table->integer('instansi_id')->unsigned();
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });

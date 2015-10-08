@@ -379,6 +379,27 @@ Route::post('caseparty/store', [
 ]);
 
 /*
+* Route Untuk Jadwal Sidang (Trial Schedule)
+*/
+Route::post('trialschedule/store', [
+	'as' => 'trialschedule.store',
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\TrialScheduleController@store',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+/*
+* Route Untuk Status Perkara (Case Status)
+*/
+Route::post('casestatus/store', [
+	'as' => 'casestatus.store',
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseStatusController@store',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+
+/*
 * Route Untuk Upload File 
 */
 Route::get('file/{uuid?}', [

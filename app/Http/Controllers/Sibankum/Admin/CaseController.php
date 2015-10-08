@@ -146,8 +146,23 @@ class CaseController extends Controller
                 ->where('side', '=', '2')
                 ->get();
 
+        $trial_schedule = DB::table('trial_schedule')
+                ->select('id', 'date_start', 'date_end', 'agenda')
+                ->where('case_id', '=', $case->case_id)
+                ->get();
+
+        $case_status = DB::table('case_status')
+                ->select('case_status.id', 'court_level_id', 'status', 'verdict', 'description', 'court_level.name')
+                ->leftJoin('court_level', 'court_level.id', '=', 'case_status.court_level_id')
+                ->where('case_id', '=', $case->case_id)
+                ->get();
+
+        $list_court_level = DB::table('court_level')
+                ->select('id', 'name')
+                ->get();
+
         // Tampilkan Tabel Pihak
-        return view('sibankum.admin.caseShow', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'list_party1' => $list_party1, 'list_party2' => $list_party2, 'user' => $user]);
+        return view('sibankum.admin.caseShow', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'list_party1' => $list_party1, 'list_party2' => $list_party2, 'trial_schedule' => $trial_schedule, 'case_status' => $case_status, 'list_court_level' => $list_court_level, 'user' => $user]);
     
     }
 

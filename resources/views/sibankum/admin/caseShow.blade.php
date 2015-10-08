@@ -87,24 +87,22 @@ active open
 														Pihak </a>
 													</li>
 													<li>
-														<a href="#portlet_tab_2" data-toggle="tab">
+														<a href="#jadwal_sidang" data-toggle="tab">
 														Jadwal Sidang </a>
 													</li>
 													<li>
-														<a href="#portlet_tab_1" data-toggle="tab">
+														<a href="#status_perkara" data-toggle="tab">
 														Status Perkara </a>
 													</li>
 												</ul>
 											</div>
 											<div class="portlet-body">
 												<div class="tab-content">
-													<div class="tab-pane" id="portlet_tab_1">
-														STATUS PERKARA, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.
+													<div class="tab-pane" id="status_perkara">
+														@include('sibankum.admin.caseStatusTableInlet')
 													</div>
-													<div class="tab-pane" id="portlet_tab_2">
-														<p>
-															 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.
-														</p>
+													<div class="tab-pane" id="jadwal_sidang">
+														@include('sibankum.admin.trialScheduleTableInlet')
 													</div>
 													<div class="tab-pane active" id="pihak">
 														@include('sibankum.admin.casePartyTableInlet')
@@ -200,6 +198,68 @@ $(document).on('click', '.new-row2', function() {
         console.log('At least 3 characters for each field required!');
 
     }
+
+});
+</script>
+<script>
+var count = 0;
+
+$(document).on('click', '.new-row3', function() {
+
+    count++;
+
+    var date_start = $('#newlink3 input[name=date_start]').val();
+    var date_end = $('#newlink3 input[name=date_end]').val();
+    var agenda = $('#newlink3 input[name=agenda]').val();
+
+    if ($('input[name=date_start]').val().length > 2 && $('input[name=date_end]').val().length > 2) {
+
+        $('<li class="not-saved">' +
+        	 date_start + ' to ' + date_end + ' : ' + agenda +
+            '<input type="hidden" name="rows[' + count + '][date_start]" value="' + date_start + '">' +
+            '<input type="hidden" name="rows[' + count + '][agenda]" value="' + agenda + '">' +
+            '<input type="hidden" name="rows[' + count + '][date_end]" value="' + date_end + '">' +
+            '</li>').appendTo('#link-list3').hide().fadeIn(280);
+
+        $('input[name=date_start]').val('');
+        $('input[name=date_end]').val('');
+        $('input[name=agenda]').val('');
+        console.log('Date Start : ' + date_start);
+    } else {
+
+        console.log('At least 3 characters for each field required!');
+
+    }
+
+});
+</script>
+<script>
+var count = 0;
+
+$(document).on('click', '.new-row4', function() {
+
+    count++;
+
+    var court_level_id = $('#newlink4 select[name=court_level_id]').val();
+    var status = $('#newlink4 select[name=status]').val();
+    var description = $('#newlink4 input[name=description]').val();
+    var verdict = $('#newlink4 input[name=verdict]').val();
+
+        $('<li class="not-saved">' +
+        	 court_level_id + ' = ' + status + ' : ' + verdict +
+            '<input type="hidden" name="rows[' + count + '][court_level_id]" value="' + court_level_id + '">' +
+            '<input type="hidden" name="rows[' + count + '][description]" value="' + description + '">' +
+            '<input type="hidden" name="rows[' + count + '][verdict]" value="' + verdict + '">' +
+            '<input type="hidden" name="rows[' + count + '][status]" value="' + status + '">' +
+            '</li>').appendTo('#link-list4').hide().fadeIn(280);
+
+        $('input[name=description]').val('');
+        $('input[name=verdict]').val('');
+        $('select[name=court_level_id]').val('');
+        $('select[name=status]').val('');
+
+        console.log('status : ' + status);
+
 
 });
 </script>

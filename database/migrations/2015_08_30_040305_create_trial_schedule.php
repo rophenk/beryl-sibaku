@@ -19,6 +19,8 @@ class CreateTrialSchedule extends Migration
             $table->foreign('case_id')
                   ->references('id')->on('case')
                   ->onDelete('cascade');
+            $table->integer('case_number');
+            $table->integer('instansi_id')->unsigned();
             $table->timestamp('date_start')->nullable();
             $table->timestamp('date_end')->nullable();
             $table->text('agenda')->nullable();
