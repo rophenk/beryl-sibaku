@@ -18,6 +18,7 @@ class CaseTableSeeder extends Seeder
         DB:: table('case') -> insert([
         'court_type_id' => '1',
 		'uuid' => '2c500087-a6c7-4e93-8276-46f3c1f0e133',
+        'api_id' => '1',
 		'number' => '1',
         'work_unit' => 'Tes Unit Kerja',
         'case_number' => '2304/PDT/CPA/2015' ,
@@ -25,7 +26,8 @@ class CaseTableSeeder extends Seeder
         'object' => 'Tes Object Perkara',
         'proposal' => 'Tes Pokok Permohonan',
         'address' => 'http://sibankum.pertanian.go.id/sample/case1.pdf',
-        'instansi_id' => '1'
+        'instansi_id' => '1',
+        'availability' => 'available'
 		]);
     }
 }

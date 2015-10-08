@@ -20,6 +20,7 @@ class CreateCase extends Migration
                   ->references('id')->on('court_type')
                   ->onDelete('cascade');
             $table->string('uuid', 36);
+            $table->integer('api_id')->nullable();
             $table->integer('number')->nullable();
             $table->string('work_unit')->nullable();
             $table->string('case_number')->nullable();
@@ -28,6 +29,7 @@ class CreateCase extends Migration
             $table->text('proposal')->nullable();
             $table->text('address')->nullable();
             $table->integer('instansi_id')->unsigned()->nullable();
+            $table->string('availability');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });

@@ -20,9 +20,9 @@ class ApiTableSeeder extends Seeder
         DB::table('api')->insert([
 		'uuid' => 'de06c432-1b58-11e5-b92a-0800270088c7',
 		'server_id' => '1',
-		'name' => 'Budidaya Holtikultura' ,
+		'name' => 'Contoh Sibankum' ,
 		'type' => 'CSV',
-		'address' => 'http://pia.pertanian.go.id/simapta/api/holtikultura.csv'
+		'address' => 'http://sibankum.pertanian.go.id/api/contohsibankum.csv'
 		]);
     }
 }
