@@ -48,9 +48,9 @@
 												        </div>
 												    </div>
 												    <br/>
-												    Format Tanggal : YYYY/MM/DD hh:ii:ss
+												    Format Tanggal : YYYY-MM-DD hh:ii:ss
 													<br/>
-													Contoh : 2015/09/27 10:00:00
+													Contoh : 2015-09-27 10:00:00
 												
 												</div>
 											</div>
