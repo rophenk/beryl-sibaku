@@ -175,16 +175,35 @@
                   <li class="ryl-option">
                     <ul>
                       @forelse ($party_side1 as $party_side1)
+
                       <li>{{ $party_side1->court_party_name }} : {{ $party_side1->case_party_name }} - {{ $party_side1->description }}</li>
                       @empty
                       @endforelse
-                    </li>
+                    </ul>
                   </li>
                   <li class="ryl-option">
+                    <ul>
                     @forelse ($party_side2 as $party_side2)
                       <li>{{ $party_side2->court_party_name }} : {{ $party_side2->case_party_name }} - {{ $party_side2->description }}</li>
                       @empty
                       @endforelse
+                    </ul>
+                  </li>
+                  <li class="ryl-option">
+                    <ul>
+                    @forelse ($trial_schedule as $trial_schedule)
+                      <li>{{ $trial_schedule->date_start }} s/d {{ $trial_schedule->date_end }} Agenda: {{ $trial_schedule->agenda }}</li>
+                      @empty
+                      @endforelse
+                    </ul>
+                  </li>
+                  <li class="ryl-option">
+                    <ul>
+                    @forelse ($case_status as $case_status)
+                      <li>{{ $case_status->name }} {{ $case_status->status }} Putusan : {{ $case_status->verdict }}, {{ $case_status->description }}</li>
+                      @empty
+                      @endforelse
+                    </ul>
                   </li>
                 </ul>
                 <a href="{{ $case->address }}" targe="_blank"><button class="ryl-btn-2 ryl-purchase">Unduh File</button></a>

@@ -47,7 +47,7 @@
 												            {!! Form::text('verdict', null, ['placeholder' => 'Isi Putusan', 'class' => 'form-control']) !!}
 												        </div>
 												        <div class="form-group">
-												            {!! Form::text('description', null, ['placeholder' => 'Keterangan', 'class' => 'form-control']) !!}
+												            {!! Form::text('description_status', null, ['placeholder' => 'Keterangan', 'class' => 'form-control']) !!}
 												        </div>
 												        <div class="form-group">
 												        	{!! Form::hidden('instansi_id', $user->instansi_id) !!}

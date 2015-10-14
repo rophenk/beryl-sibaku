@@ -48,7 +48,7 @@ class CaseStatusController extends Controller
                     'court_level_id' => $row["court_level_id"],
                     'status' => $row["status"],
                     'verdict' => $row["verdict"],
-                    'description' => $row["description"],
+                    'description' => $row["description_status"],
                     'case_number' => $input["case_number"],
                     'instansi_id' => $input["instansi_id"],
                 ]);

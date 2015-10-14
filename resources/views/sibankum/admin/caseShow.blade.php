@@ -163,7 +163,9 @@ $(document).on('click', '.new-row', function() {
 
     } else {
 
-        console.log('At least 3 characters for each field required!');
+        console.log('At least 3 characters for each field required! For Pihak 1');
+        console.log('Name :' + $('input[name=name]').val());
+        console.log('Description :' + $('input[name=description]').val());
 
     }
 
@@ -242,18 +244,18 @@ $(document).on('click', '.new-row4', function() {
 
     var court_level_id = $('#newlink4 select[name=court_level_id]').val();
     var status = $('#newlink4 select[name=status]').val();
-    var description = $('#newlink4 input[name=description]').val();
+    var description = $('#newlink4 input[name=description_status]').val();
     var verdict = $('#newlink4 input[name=verdict]').val();
 
         $('<li class="not-saved">' +
         	 court_level_id + ' = ' + status + ' : ' + verdict +
             '<input type="hidden" name="rows[' + count + '][court_level_id]" value="' + court_level_id + '">' +
-            '<input type="hidden" name="rows[' + count + '][description]" value="' + description + '">' +
+            '<input type="hidden" name="rows[' + count + '][description_status]" value="' + description + '">' +
             '<input type="hidden" name="rows[' + count + '][verdict]" value="' + verdict + '">' +
             '<input type="hidden" name="rows[' + count + '][status]" value="' + status + '">' +
             '</li>').appendTo('#link-list4').hide().fadeIn(280);
 
-        $('input[name=description]').val('');
+        $('input[name=description_status]').val('');
         $('input[name=verdict]').val('');
         $('select[name=court_level_id]').val('');
         $('select[name=status]').val('');

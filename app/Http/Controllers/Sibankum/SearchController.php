@@ -115,7 +115,18 @@ class SearchController extends Controller
                 ->where('side', '=', '2')
                 ->get();
 
-         return view('sibankum.detail', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'list_party1' => $list_party1, 'list_party2' => $list_party2]);
+        $trial_schedule = DB::table('trial_schedule')
+                ->select('date_start', 'date_end', 'agenda')
+                ->where('case_id', '=' , $case->case_id)
+                ->get();
+
+        $case_status = DB::table('case_status')
+                ->select('court_level.name', 'case_status.status', 'verdict', 'description')
+                ->leftJoin('court_level', 'case_status.court_level_id', '=', 'court_level.id')
+                ->where('case_id', '=' , $case->case_id)
+                ->get();
+
+         return view('sibankum.detail', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'list_party1' => $list_party1, 'list_party2' => $list_party2, 'trial_schedule' => $trial_schedule, 'case_status' => $case_status]);
     }
 
     /**
