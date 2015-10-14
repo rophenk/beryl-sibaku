@@ -19,8 +19,12 @@ Route::get('/lala', function () {
     return view('welcome');
 });
 
-Route::resource('/', 'Sibankum\SibankumController');
+
+/*Route::resource('/', 'Sibankum\SibankumController');*/
+Route::resource('/', 'IndexLoginController@login');
 Route::get('index', 'Sibankum\SibankumController@demo');
+Route::get('indexlogin', 'IndexLoginController@login');
+Route::post('indexlogin', 'IndexLoginController@postLogin');
 Route::post('result', 'Sibankum\SearchController@result');
 Route::get('detail/{uuid?}', 'Sibankum\SearchController@show');
 
