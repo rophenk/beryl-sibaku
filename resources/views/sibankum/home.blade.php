@@ -178,8 +178,10 @@
         <header class="ryl-section-header-style-2 ryl-bg-gray">
           <div class="container ryl-padding-top-20 ryl-padding-bottom-20">
             <div class="ryl-madrin-logo-dark-3 ryl-center-block ryl-margin-bottom-35"></div>
-            <h4 class="ryl-margin-bottom-30">WELCOME TO SIBANKUM</h4>
-            <p class="ryl-margin-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum. Sed eget velit ipsum. Duis in tortor scelerisque felis mattis imperdiet. Donec at libero tellus. Suspendisse consectetur consectetur bibendum.</p>
+            <!--<h4 class="ryl-margin-bottom-30">NARASI</h4>-->
+            <p class="ryl-margin-bottom-30">Advokasi hukum lingkup Kementerian Pertanian yang dilaksanakan dalam rangka mengantisipasi akibat hukum yang ditimbulkan dalam suatu pelaksanaan kegiatan baik litigasi dan non litigasi dengan pembatasan tertentu. Diperlukan penanganan berupa bantuan hukum secara terkoordinasi dengan obyek penyelesaian meliputi: pengamanan kebijakan berupa beschiking dan regeling, permasalahan aset negara berupa tanah/bangunan, perjanjian/wanprestasi, permasalahan tender/lelang, perizinan, kepegawaian, aspek perdata dan tata usaha negara, judicial review di mahkamah agung, dan constitutional review di mahkamah konstitusi, serta menghadapi gugatan masyarakat, lembaga swadaya masyarakat dan pihak swasta terhadap Menteri Pertanian, Direktur Jenderal/Kepala Badan lingkup eselon I Kementerian Pertanian.<br /><br />
+Dasar Hukum: Pasal 65 Ayat (2) Permentan Nomor 43/2015 tentang Organisasi dan Tata Kerja Kementerian Pertanian.
+.</p>
             <hr/>
           </div>
         </header>
@@ -276,11 +278,11 @@
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
             <h3>LAYANAN BANTUAN HUKUM</h3>
-            <p>We are a full service, general practice law firm</p>
+            <p>Layanan Bantuan Hukum berupa pemberian pertimbangan hukum (litigasi/non litigasi),  legal opinion, dan kajian hukum yang dikoordinasikan dengan unit eselon I terkait, melakukan mediasi dan pemberian bantuan hukum dalam menghadapi gugatan perdata dan tata usaha negara terhadap Kementerian Pertanian yang dilakukan secara koordinasi, </p>
             <hr/>
           </div>
         </header>
-        <div class="container">
+        <!--<div class="container">
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12 ryl-section-item">
               <div class="ryl-service-item">
@@ -343,14 +345,14 @@
             </div>
             <div class="clearfix"></div>
           </div>
-        </div>
+        </div>-->
       </section>
       <section id="testimonial">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-testimonial-parallax-background-style-3 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-2  ryl-bg-trans ryl-section-header-left ryl-margin-top-50 ryl-margin-bottom-50">
           <div class="container">
-            <h3 style="color:white">VISI dan MISI</h3>
-            <p style="color:white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3 style="color:black">VISI dan MISI</h3>
+            <!--<p style="color:white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
             <hr/>
           </div>
         </header>
@@ -360,27 +362,16 @@
               <div class="ryl-text-carousel has-nav owl-carousel has-index">
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
-                    <p>Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum. Sed eget velit ipsum. Duis in tortor scelerisque felis mattis imperdiet. Donec at libero tellus. Suspendisse consectetur consectetur bibendum.</p>
+                    <p><strong>Visi:</strong><br />
+                    Terwujud dan berfungsinya sistem hukum pertanian dan tersedianya informasi publik yang lengkap dalam mendukung pembangunan pertanian.
+                    </p>
                   </div>
                 </div>
                 <div class="ryl-text-carousel-item">
                   <div class="ryl-text-carousel-content">
-                    <p>Illo, recusandae quia alias. Donec at libero tellus. Suspendisse consectetur consectetur bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-                <div class="ryl-text-carousel-item">
-                  <div class="ryl-text-carousel-content">
-                    <p>Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum. Sed eget velit ipsum. Duis in tortor scelerisque felis mattis imperdiet. Donec at libero tellus. Suspendisse consectetur consectetur bibendum.</p>
-                  </div>
-                </div>
-                <div class="ryl-text-carousel-item">
-                  <div class="ryl-text-carousel-content">
-                    <p>Illo, recusandae quia alias. Donec at libero tellus. Suspendisse consectetur consectetur bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-                <div class="ryl-text-carousel-item">
-                  <div class="ryl-text-carousel-content">
-                    <p>Lorem ipsum dolor sit amet,Donec at libero tellus. Suspendisse consectetur consectetur bibendum. consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, recusandae quia alias.</p>
+                    <p><strong>Misi:</strong> <br />
+                    Memberikan Pertimbangan dan Bantuan Hukum.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -392,20 +383,27 @@
       <section id="process" class="ryl-bg-light">
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
-            <h3>OUR PROCESS</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. </p>
+            <h3>ALUR PENYELESAIAN PERKARA</h3>
+            <p>Berikut alur penyelesaian perkara</p>
             <hr/>
           </div>
         </header>
         <div class="container ryl-section-item">
           <div class="ryl-process-wrapper">
             <div id="ryl-process-list" class="ryl-process-style-2">
-              <div class="ryl-process-item">
+
+                  <center>
+                    <h5 class="ryl-bold-heading">PROSES PENYELESAIAN PERKARA PERDATA</h5>
+                    <p><img src="sbk/assets/images/flow-perdata.png" /></p>
+                    <h5 class="ryl-bold-heading">PROSES PENYELESAIAN PERKARA DI PTUN</h5>
+                    <p><img src="sbk/assets/images/flow-ptun.png" /></p>
+                </center>
+              <!--<div class="ryl-process-item">
                 <div class="ryl-icon"><i class="ryl-icon-super-square-1 icon-businessman170"></i></div>
                 <div class="ryl-line"></div>
                 <div class="ryl-content">
-                  <h5 class="ryl-bold-heading">CONSULTING</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                  <h5 class="ryl-bold-heading">PROSES PENYELESAIAN PERKARA PERDATA</h5>
+                  <p><img src="sbk/assets/images/flow-perdata.png" /></p>
                 </div>
               </div>
               <div class="ryl-process-item">
@@ -431,11 +429,11 @@
                   <h5 class="ryl-bold-heading">MEDIATION</h5>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                 </div>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
-        <div class="container ryl-section-item text-center"><a href="#contact" class="ryl-btn-2">CONTACT NOW</a></div>
+        <div class="container ryl-section-item text-center"><a href="#contact" class="ryl-btn-2">HUBUNGI KAMI</a></div>
       </section>
       <section id="twitter" class="ryl-bg-dots ryl-color-light">
         <div class="ryl-margin-top-90"></div>
@@ -595,8 +593,8 @@
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-contact-parallax-background-style-1 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
-            <h3>GET IN TOUCH</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. </p>
+            <h3>HUBUNGI KAMI</h3>
+            <p>Anda dapat menghubungi kami pada alamat berikut. </p>
             <hr/>
           </div>
         </header>
@@ -607,7 +605,7 @@
                 <div class="ryl-contact-info"><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-location"></i>Jl. Harsono RM No.3 Ragunan - Pasar Minggu
 Jakarta 12550</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-phone"></i>+62 21 780 4117</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-email29"></i>humas@pertanian.go.id</span><span class="ryl-info-item"><i class="ryl-icon-inline-text icon-domain1"></i>sibankum.pertanian.go.id</span></div>
               </div>
-              <div class="col-xs-12 ryl-section-item">
+              <!--<div class="col-xs-12 ryl-section-item">
                 <form class="ryl-form-input-style-1">
                   <div class="row">
                     <div class="col-md-5 col-xs-12">
@@ -623,7 +621,7 @@ Jakarta 12550</span><span class="ryl-info-item"><i class="ryl-icon-inline-text i
                     </div>
                   </div>
                 </form>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
