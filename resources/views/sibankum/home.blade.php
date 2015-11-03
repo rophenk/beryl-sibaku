@@ -14,14 +14,10 @@
       function required()
       {
         var empt = document.forms["search"]["keyword"].value;
-        if (empt == "")
+        if (empt == null || empt == "")
         {
           alert("Kata Kunci Tidah Boleh Kosong");
           return false;
-        }
-        else 
-        {
-          return true; 
         }
       }
                   
@@ -158,7 +154,7 @@
           <div class="ryl-cell-middle text-center"><b class="ryl-fs-1">SISTEM INFORMASI BANTUAN HUKUM</b>
             <!--<hr class="ryl-margin-bottom-35">-->
             <p class="ryl-fs-4 ryl-fw-medium">Mesin Pencari Dokumen Bantuan Hukum</p>
-            <form class="ryl-form-input-style-1" action="/result" method="post" name="search" onsubmit="required()">
+            <form class="ryl-form-input-style-1" action="/result" method="post" name="search" onsubmit="return required()">
               {!! csrf_field() !!}
                   <div class="row">
                     <div class="col-xs-12 text-center">
