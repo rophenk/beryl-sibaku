@@ -39,13 +39,14 @@
         <ul class="ryl-nav-right-content">
           <li><a href="/index#home">BERANDA</a></li>
           <li><a href="/index#about">TENTANG</a></li>
-          <!--<li><a href="/index#case-study">STUDI KASUS</a></li>
-          <li><a href="/index#service">LAYANAN</a></li>
-          <li><a href="/index#testimonial">TESTIMONIAL</a></li>-->
-          <li><a href="/index#pricing-table">TERBARU</a></li>
+          <li><a href="/index#produk-hukum">PRODUK HUKUM PERTANIAN</a></li>
+          <li><a href="/index#layanan-bantuan-hukum">LAYANAN BANTUAN HUKUM</a></li>
+          <li><a href="/index#visi-misi">VISI MISI</a></li>
+          <li><a href="/index#alur">ALUR PENYELESAIAN PERKARA</a></li>
           <!--<li><a href="/index#process">PROCESS</a></li>
           <li><a href="/index<#news">BERITA</a></li>-->
           <li><a href="/index#contact">KONTAK</a></li>
+          <li><a href="/login">LOGIN</a></li>
         </ul>
         <footer>
           <!--<ul class="ryl-list-inline-block">
@@ -182,7 +183,7 @@ Dasar Hukum: Pasal 65 Ayat (2) Permentan Nomor 43/2015 tentang Organisasi dan Ta
           </div>
         </header>
       </section>
-      <section id="case-study">
+      <section id="produk-hukum">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-case-study-parallax-background-style-1 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
@@ -270,7 +271,7 @@ Dasar Hukum: Pasal 65 Ayat (2) Permentan Nomor 43/2015 tentang Organisasi dan Ta
           </div>
         </div>
       </section>
-      <section id="service" class="ryl-bg-light">
+      <section id="layanan-bantuan-hukum" class="ryl-bg-light">
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
             <h3>LAYANAN BANTUAN HUKUM</h3>
@@ -343,7 +344,7 @@ Dasar Hukum: Pasal 65 Ayat (2) Permentan Nomor 43/2015 tentang Organisasi dan Ta
           </div>
         </div>-->
       </section>
-      <section id="testimonial">
+      <section id="visi-misi">
         <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-testimonial-parallax-background-style-3 ryl-parallax-bg"></div>
         <header class="ryl-section-header-style-2  ryl-bg-trans ryl-section-header-left ryl-margin-top-50 ryl-margin-bottom-50">
           <div class="container">
@@ -376,7 +377,7 @@ Dasar Hukum: Pasal 65 Ayat (2) Permentan Nomor 43/2015 tentang Organisasi dan Ta
         </div>
         <div class="ryl-margin-top-90 clearfix visible-lg"></div>
       </section>
-      <section id="process" class="ryl-bg-light">
+      <section id="alur" class="ryl-bg-light">
         <header class="ryl-section-header-style-2  ryl-bg-gray">
           <div class="container">
             <h3>ALUR PENYELESAIAN PERKARA</h3>
