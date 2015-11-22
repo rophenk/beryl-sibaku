@@ -52,7 +52,7 @@ active open
 										<div class="form-group">
 											<label>Sisi</label>
 											<?php 
-											if($court_party->name === 1) {
+											if($court_party->side === 1) {
 												$selected1 = ' selected="yes"';
 												$selected2 = '';
 											} else {
