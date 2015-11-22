@@ -99,16 +99,16 @@ $(document).ready( function () {
                     @forelse ($data as $data)
                       <?php 
                         $materi = '';
-                        if($data->id_jenis_perkara = '1') {
+                        if($data->id_jenis_perkara == '1') {
                           $materi = $data->principal;
                         }
-                        if($data->id_jenis_perkara = '2') {
+                        if($data->id_jenis_perkara == '2') {
                           $materi = $data->object;
                         }
-                        if($data->id_jenis_perkara = '3') {
+                        if($data->id_jenis_perkara == '3') {
                           $materi = $data->proposal;
                         }
-                        if($data->id_jenis_perkara = '4') {
+                        if($data->id_jenis_perkara == '4') {
                           $materi = $data->proposal;
                         }
                       ?>
