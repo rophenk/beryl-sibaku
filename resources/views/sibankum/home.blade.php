@@ -440,28 +440,28 @@ Dasar Hukum: Pasal 65 Ayat (2) Permentan Nomor 43/2015 tentang Organisasi dan Ta
             <div class="ryl-twitter-rss-item">
               <div class="ryl-logo"><i class="icon-twitter"></i></div>
               <div class="ryl-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam <a href="#">#sed ligula</a> odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. Ut neque ero. Lorem ipsum dolor sit.</p>
+                <p>Kementerian Pertanian selalu menjunjung tinggi hukum dan undang undang.</p>
               </div>
               <div class="ryl-info">
-                <div class="ryl-time">About 8 hours ago</div><a href="#">@envato</a>
+                <div class="ryl-time">About 6 hours ago</div><a href="#">@kementan</a>
               </div>
             </div>
             <div class="ryl-twitter-rss-item">
               <div class="ryl-logo"><i class="icon-twitter"></i></div>
               <div class="ryl-content">
-                <p>Ut pretium . Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A. <a href="#">#sed ligula</a> odio. Sed id metus felis. Lorem ipsum dolor sit.</p>
+                <p>Memberikan pertimbangan dan bantuan hukum merupakan bagian dari visi dan misi kami.</p>
               </div>
               <div class="ryl-info">
-                <div class="ryl-time">About 8 hours ago</div><a href="#">@envato</a>
+                <div class="ryl-time">About 7 hours ago</div><a href="#">@kementan</a>
               </div>
             </div>
             <div class="ryl-twitter-rss-item">
               <div class="ryl-logo"><i class="icon-twitter"></i></div>
               <div class="ryl-content">
-                <p>Sed id metus felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam <a href="#">#sed ligula</a> odio.  Ut pretium nisl .Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit.</p>
+                <p>Advokasi hukum lingkup Kementerian Pertanian yang dilaksanakan dalam rangka mengantisipasi akibat hukum yang ditimbulkan dalam suatu pelaksanaan kegiatan baik litigasi dan non litigasi dengan pembatasan tertentu.</p>
               </div>
               <div class="ryl-info">
-                <div class="ryl-time">About 8 hours ago</div><a href="#">@envato</a>
+                <div class="ryl-time">About 8 hours ago</div><a href="#">@kementan</a>
               </div>
             </div>
           </div>
