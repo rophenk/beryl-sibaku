@@ -73,6 +73,9 @@
 							<li class="@yield('court_type-active')">
 								<a href="/court_type">Jenis Pengadilan</a>
 							</li>
+							<li class="@yield('case_type-active')">
+								<a href="/case_type">Jenis Perkara</a>
+							</li>
 						</ul>
 					</li>
 					@if($user->role_id <= 2)

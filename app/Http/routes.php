@@ -42,6 +42,49 @@ Route::get('home', [
 ]);
 
 /**
+ * Route untuk menampilkan data Case Type
+ */
+Route::get('case_type', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseTypeController@index',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case_type', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseTypeController@index',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case_type/create', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseTypeController@create',
+	'roles' => ['administrator'] // Only an administrator can access this route
+]);
+Route::post('case_type/store', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseTypeController@store',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case_type/edit/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseTypeController@edit',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case_type/show/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseTypeController@show',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('case_type/update', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseTypeController@update',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('case_type/destroy/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\CaseTypeController@destroy',
+	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+/**
  * Route untuk menampilkan data Court Type
  */
 Route::get('court_type', [

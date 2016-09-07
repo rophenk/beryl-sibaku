@@ -15,6 +15,10 @@ class CreateCase extends Migration
         // Buat Tabel Case
          Schema::create('case', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('case_type_id')->unsigned()->nullable();
+            $table->foreign('case_type_id')
+                  ->references('id')->on('case_type')
+                  ->onDelete('null');
             $table->integer('court_type_id')->unsigned();
             $table->foreign('court_type_id')
                   ->references('id')->on('court_type')

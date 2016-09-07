@@ -16,6 +16,7 @@ class CaseTableSeeder extends Seeder
 
         //
         DB:: table('case') -> insert([
+        'case_type_id' => '2',
         'court_type_id' => '1',
 		'uuid' => '2c500087-a6c7-4e93-8276-46f3c1f0e133',
         'api_id' => '1',
