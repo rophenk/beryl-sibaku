@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->integer('instansi_id')->unsigned()->nullable();
+            $table->string('api_token', 60)->unique(); // Kita tambahkan ini
             $table->rememberToken();
             $table->timestamps();
             $table->integer('role_id')->unsigned()->nullable()->default(5);

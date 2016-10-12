@@ -41,13 +41,24 @@ active open
 									{!! csrf_field() !!}
 									<div class="form-body">
 										<div class="form-group">
+											<label>Jenis Perkara</label>
+											<select class="form-control" id="case_type_id" name="case_type_id">
+												<option>=== PILIH JENIS PERKARA ===</option>
+												@forelse ($case_type_options as $case_type)
+												<option value="{{ $case_type->id }}">{{ $case_type->name }}</option>
+												@empty
+												<option>Belum ada Jenis Perkara</option>
+												@endforelse
+											</select>
+										</div>
+										<div class="form-group">
 											<label>Jenis Pengadilan</label>
 											<select class="form-control" id="court_type_id" name="court_type_id">
 												<option>=== PILIH JENIS PENGADILAN ===</option>
 												@forelse ($court_type_options as $court_type)
 												<option value="{{ $court_type->id }}">{{ $court_type->name }}</option>
 												@empty
-												<option>Belum ada data Perkara</option>
+												<option>Belum ada data Jenis Pengadilan</option>
 												@endforelse
 											</select>
 										</div>

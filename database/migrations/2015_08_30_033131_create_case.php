@@ -16,13 +16,7 @@ class CreateCase extends Migration
          Schema::create('case', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('case_type_id')->unsigned()->nullable();
-            $table->foreign('case_type_id')
-                  ->references('id')->on('case_type')
-                  ->onDelete('null');
-            $table->integer('court_type_id')->unsigned();
-            $table->foreign('court_type_id')
-                  ->references('id')->on('court_type')
-                  ->onDelete('cascade');
+            $table->integer('court_type_id')->unsigned()->nullable();
             $table->string('uuid', 36);
             $table->integer('api_id')->nullable();
             $table->integer('number')->nullable();
@@ -36,6 +30,13 @@ class CreateCase extends Migration
             $table->string('availability');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
+
+            $table->foreign('case_type_id')
+                  ->references('id')->on('case_type')
+                  ->onDelete('cascade');
+            $table->foreign('court_type_id')
+                  ->references('id')->on('court_type')
+                  ->onDelete('cascade');
         });
     }
 

@@ -16,9 +16,6 @@ class CreateTrialSchedule extends Migration
          Schema::create('trial_schedule', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('case_id')->unsigned();
-            $table->foreign('case_id')
-                  ->references('id')->on('case')
-                  ->onDelete('cascade');
             $table->integer('case_number');
             $table->integer('instansi_id')->unsigned();
             $table->timestamp('date_start')->nullable();
@@ -26,6 +23,10 @@ class CreateTrialSchedule extends Migration
             $table->text('agenda')->nullable();
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
+            
+            $table->foreign('case_id')
+                  ->references('id')->on('case')
+                  ->onDelete('cascade');
         });
     }
 

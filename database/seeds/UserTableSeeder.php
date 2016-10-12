@@ -18,6 +18,7 @@ class UserTableSeeder extends Seeder
         'password' => bcrypt('rahasia'),
         'instansi_id' => '1',
         'role_id' => '1',
+        'api_token' => str_random(60)
         ]);
     }
 }

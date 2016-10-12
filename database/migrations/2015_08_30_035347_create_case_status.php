@@ -16,13 +16,7 @@ class CreateCaseStatus extends Migration
          Schema::create('case_status', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('case_id')->unsigned();
-            $table->foreign('case_id')
-                  ->references('id')->on('case')
-                  ->onDelete('cascade');
             $table->integer('court_level_id')->unsigned();
-            $table->foreign('court_level_id')
-                  ->references('id')->on('court_level')
-                  ->onDelete('cascade');
             $table->text('status')->nullable();
             $table->text('verdict')->nullable();
             $table->text('description')->nullable();
@@ -30,6 +24,14 @@ class CreateCaseStatus extends Migration
             $table->integer('instansi_id')->unsigned();
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
+
+
+            $table->foreign('case_id')
+                  ->references('id')->on('case')
+                  ->onDelete('cascade');
+            $table->foreign('court_level_id')
+                  ->references('id')->on('court_level')
+                  ->onDelete('cascade');
         });
     }
 

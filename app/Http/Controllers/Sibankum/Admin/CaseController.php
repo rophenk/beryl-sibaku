@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Sibankum\CaseModel;
 use App\Models\Sibankum\CourtType;
 use App\Models\Sibankum\CaseParty;
+use App\Models\Sibankum\CaseType;
 use DB;
 
 class CaseController extends Controller
@@ -29,7 +30,8 @@ class CaseController extends Controller
 
             // Tampilkan semua data Instansi
              $case = DB::table('case')
-                ->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'court_type.id as court_type_id' , 'court_type.name as court_type')
+                ->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'court_type.id as court_type_id' , 'court_type.name as court_type', 'case_type.name as case_type')
+                ->join('case_type', 'case.case_type_id', '=', 'case_type.id')
                 ->join('court_type', 'case.court_type_id', '=', 'court_type.id')
                 ->get();
 
@@ -39,7 +41,8 @@ class CaseController extends Controller
 
             // Tampilkan sesuai data Instansi user tersebut
             $case = DB::table('case')
-                ->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'court_type.id as court_type_id' , 'court_type.name as court_type')
+                ->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'court_type.id as court_type_id' , 'court_type.name as court_type', 'case_type.name as case_type')
+                ->join('case_type', 'case.case_type_id', '=', 'case_type.id')
                 ->join('court_type', 'case.court_type_id', '=', 'court_type.id')
                 ->where('instansi_id', '=', $instansi_id)
                 ->get();
@@ -61,8 +64,11 @@ class CaseController extends Controller
         
         if($role_id <= 2) {
 
-            // Tampilkan semua data Server
+            // Tampilkan semua data Pengadilan
             $court_type = CourtType::all();
+
+            // Tampilkan semua Jenis Perkara
+            $case_type = CaseType::all();
 
         } else {
 
@@ -73,10 +79,17 @@ class CaseController extends Controller
                          ->get();*/
             $court_type = CourtType::all();
 
+            // Tampilkan semua Jenis Perkara
+            $case_type = CaseType::all();
+
         }
 
-        // Tampilkan Form Server
-        return view('sibankum.admin.caseForm', ['court_type_options' => $court_type, 'user' => $user]);
+        // Tampilkan Form Pengadilan
+        return view('sibankum.admin.caseForm', [
+            'court_type_options' => $court_type, 
+            'case_type_options' => $case_type, 
+            'user' => $user
+            ]);
     
     }
 
@@ -91,6 +104,7 @@ class CaseController extends Controller
         // Validate the request...
         $case = new CaseModel;
         $case->court_type_id= $request->court_type_id;
+        $case->case_type_id = $request->case_type_id;
         $case->uuid         = Uuid::uuid4();
         $case->number       = $request->number;
         $case->work_unit    = $request->work_unit;
@@ -117,8 +131,9 @@ class CaseController extends Controller
         $role_id    = $request->user()->role_id;
 
         $case = DB::table('case')
-                ->select('case.id as case_id', 'case.uuid as case_uuid', 'court_type.name as court_name', 'case.court_type_id', 'case.number', 'case.case_number', 'case.work_unit', 'case.principal', 'case.object', 'case.proposal', 'case.address')
+                ->select('case.id as case_id', 'case.uuid as case_uuid', 'court_type.name as court_name', 'case_type.name as case_type', 'case.court_type_id', 'case.number', 'case.case_number', 'case.work_unit', 'case.principal', 'case.object', 'case.proposal', 'case.address')
                 ->leftJoin('court_type', 'case.court_type_id', '=', 'court_type.id')
+                ->leftJoin('case_type', 'case.case_type_id', '=', 'case_type.id')
                 ->where('case.uuid', '=' ,$uuid)
                 ->first();
 
@@ -162,7 +177,17 @@ class CaseController extends Controller
                 ->get();
 
         // Tampilkan Tabel Pihak
-        return view('sibankum.admin.caseShow', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'list_party1' => $list_party1, 'list_party2' => $list_party2, 'trial_schedule' => $trial_schedule, 'case_status' => $case_status, 'list_court_level' => $list_court_level, 'user' => $user]);
+        return view('sibankum.admin.caseShow', [
+            'case' => $case, 
+            'party_side1' => $party_side1, 
+            'party_side2' => $party_side2, 
+            'list_party1' => $list_party1, 
+            'list_party2' => $list_party2, 
+            'trial_schedule' => $trial_schedule, 
+            'case_status' => $case_status, 
+            'list_court_level' => $list_court_level, 
+            'user' => $user
+            ]);
     
     }
 
@@ -188,6 +213,9 @@ class CaseController extends Controller
             // Tampilkan semua data Perkara
             $court_type = CourtType::all();
 
+            // Tampilkan semua Jenis Perkara
+            $case_type = CaseType::all();
+
         } else {
 
             $instansi_id = $request->user()->instansi_id;
@@ -197,10 +225,18 @@ class CaseController extends Controller
                          ->get();*/
             $court_type = CourtType::all();
 
+            // Tampilkan semua Jenis Perkara
+            $case_type = CaseType::all();
+
         }
 
         //Tampilkan Form yang terisi data
-        return view('sibankum.admin.caseFormEdit', ['case' => $case, 'court_type_options' => $court_type, 'user' => $user]);
+        return view('sibankum.admin.caseFormEdit', [
+            'case' => $case, 
+            'court_type_options' => $court_type, 
+            'case_type_options' => $case_type, 
+            'user' => $user
+            ]);
     }
 
     /**
@@ -216,6 +252,7 @@ class CaseController extends Controller
         CaseModel::where('uuid' ,$request->uuid)
         ->update([
             'court_type_id' => $request->court_type_id, 
+            'case_type_id'  => $request->case_type_id,
             'number'        => $request->number,
             'work_unit'     => $request->work_unit,
             'case_number'   => $request->case_number,

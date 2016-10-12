@@ -42,6 +42,28 @@ active open
 									{!! csrf_field() !!}
 									<div class="form-body">
 										<div class="form-group">
+											<label>Jenis Perkara</label>
+											<select class="form-control" id="case_type_id" name="case_type_id">
+												<option>=== PILIH JENIS PERKARA ===</option>
+												@forelse ($case_type_options as $case_type)
+												<?php
+													if($case_type->id === $case->case_type_id) {
+
+														$selected_type = ' selected="yes"';
+
+													} else {
+
+														$selected_type = '';
+
+													}
+													?>
+												<option value="{{ $case_type->id }}"<?php echo $selected_type; ?>>{{ $case_type->name }}</option>
+												@empty
+												<option>Belum ada Jenis Perkara</option>
+												@endforelse
+											</select>
+										</div>
+										<div class="form-group">
 											<label>Jenis Pengadilan</label>
 											<select class="form-control" id="court_type_id" name="court_type_id">
 												<option>=== PILIH JENIS PENGADILAN ===</option>
