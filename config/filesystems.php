@@ -70,6 +70,11 @@ return [
             'bucket' => 'your-bucket',
         ],
 
+        'sibankum' => [
+        'driver' => 'local',
+        'root'   => public_path() . '/uploads/',
+        ],
+
         'rackspace' => [
             'driver'    => 'rackspace',
             'username'  => 'your-username',

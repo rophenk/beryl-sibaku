@@ -176,17 +176,23 @@ class CaseController extends Controller
                 ->select('id', 'name')
                 ->get();
 
+        $case_files = DB::table('files')
+                ->select('files.id', 'name', 'description', 'url', 'uuid')
+                ->where('case_id', '=', $case->case_id)
+                ->get();
+
         // Tampilkan Tabel Pihak
         return view('sibankum.admin.caseShow', [
-            'case' => $case, 
-            'party_side1' => $party_side1, 
-            'party_side2' => $party_side2, 
-            'list_party1' => $list_party1, 
-            'list_party2' => $list_party2, 
+            'case'           => $case, 
+            'party_side1'    => $party_side1, 
+            'party_side2'    => $party_side2, 
+            'list_party1'    => $list_party1, 
+            'list_party2'    => $list_party2, 
             'trial_schedule' => $trial_schedule, 
-            'case_status' => $case_status, 
-            'list_court_level' => $list_court_level, 
-            'user' => $user
+            'case_status'    => $case_status, 
+            'list_court_level' => $list_court_level,
+            'case_files'    => $case_files, 
+            'user'           => $user
             ]);
     
     }

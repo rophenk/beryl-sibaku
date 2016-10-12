@@ -19,7 +19,12 @@
 												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 												<h4 class="modal-title">Tambah Pihak Pertama</h4>
 											</div>
-											{!! Form::open(['route' => ['caseparty.store'], 'method' => 'post', 'role'=> 'form', 'class' => 'form']) !!}
+											{!! Form::open([
+												'route' => ['caseparty.store'], 
+												'method' => 'post', 
+												'role'=> 'form', 
+												'class' => 'form'
+											]) !!}
 
 											<div class="modal-body">
 												
@@ -130,7 +135,12 @@
 												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 												<h4 class="modal-title">Tambah Pihak Kedua</h4>
 											</div>
-											{!! Form::open(['route' => ['caseparty.store'], 'method' => 'post', 'role'=> 'form', 'class' => 'form']) !!}
+											{!! Form::open([
+												'route' => ['caseparty.store'], 
+												'method' => 'post', 
+												'role'=> 'form', 
+												'class' => 'form'
+											]) !!}
 
 											<div class="modal-body">
 												

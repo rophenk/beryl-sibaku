@@ -31,3 +31,8 @@
 <link href="{{ asset('sbk/admin/assets/admin/layout2/css/themes/grey.css') }}" rel="stylesheet" type="text/css" id="style_color"/>
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="{{ asset('sbk/favicon.png') }}"/>
+<script language="javascript">
+            function confirmDelete() {
+                return confirm("Yakin akan menghapus data ini ?");
+            }
+        </script>

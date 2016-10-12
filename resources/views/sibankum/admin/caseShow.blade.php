@@ -87,6 +87,10 @@ active open
 														Pihak </a>
 													</li>
 													<li>
+														<a href="#berkas" data-toggle="tab">
+														Berkas </a>
+													</li>
+													<li>
 														<a href="#jadwal_sidang" data-toggle="tab">
 														Jadwal Sidang </a>
 													</li>
@@ -100,6 +104,10 @@ active open
 												<div class="tab-content">
 													<div class="tab-pane" id="status_perkara">
 														@include('sibankum.admin.caseStatusTableInlet')
+													</div>
+
+													<div class="tab-pane" id="berkas">
+														@include('sibankum.admin.filesTableInlet')
 													</div>
 													<div class="tab-pane" id="jadwal_sidang">
 														@include('sibankum.admin.trialScheduleTableInlet')
@@ -147,8 +155,13 @@ $(document).on('click', '.new-row', function() {
     var name = $('#newlink input[name=name]').val();
     var description = $('#newlink input[name=description]').val();
     var court_party_id = $('#newlink select[name=court_party_id]').val();
+    
+    console.log('Submit Name :' + name);
+    console.log('description :' + description);
+    console.log('court_party_id:' + court_party_id);
 
-    if ($('input[name=name]').val().length > 2 && $('input[name=description]').val().length > 2) {
+
+    if (name.length > 2 && description.length > 2) {
 
         $('<li class="not-saved">' +
         	 name + ' : ' + description +
@@ -195,9 +208,13 @@ $(document).on('click', '.new-row2', function() {
         $('input[name=description2]').val('');
         $('select[name=court_party_id2]').val('');
         console.log('Name : ' + name2);
+        console.log('Name : ' + description2);
+        console.log('Name : ' + court_party_id2);
     } else {
 
-        console.log('At least 3 characters for each field required!');
+        console.log('At least 3 characters for each field required! For Pihak 2');
+        console.log('Name :' + $('input[name=name]').val());
+        console.log('Description :' + $('input[name=description]').val());
 
     }
 

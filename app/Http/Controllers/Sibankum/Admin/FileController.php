@@ -6,9 +6,14 @@ use Validator;
 use Session;
 use Redirect;
 use Input;
+use Rhumsaa\Uuid\Uuid;
+use Rhumsaa\Uuid\Exception\UnsatisfiedDependencyException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Sibankum\FileModel;
+use DB;
 
 class FileController extends Controller
 {
@@ -58,6 +63,56 @@ class FileController extends Controller
           // sending back with error message.
           Session::flash('error', 'uploaded file is not valid');
           return Redirect::to('file');
+        }
+      }
+    }
+
+    public function uploadCaseFile(Request $request) {
+        $case_uuid = $request->case_uuid;
+        if(!empty($case_uuid)){
+            $prefix = $case_uuid.'-';
+        } else {
+            $prefix = '';
+        }
+      // getting all of the post data
+      $file = array('file' => $request->file('file'));
+      // setting up rules
+      $rules = array('file' => 'required', 'mime' => 'pdf'); //mimes:jpeg,bmp,png and for max size max:10000
+      // doing the validation, passing post data, rules and the messages
+      $validator = Validator::make($file, $rules);
+      if ($validator->fails()) {
+        // send back to the page with the input data and errors
+        return Redirect::to('/case/show/'.$case_uuid.'#berkas')->withInput()->withErrors($validator);
+      }
+      else {
+        // checking file is valid.
+        if ($request->file('file')->isValid()) {
+          $destinationPath = 'uploads/'.$case_uuid.'/'; // upload path
+          $extension = $request->file('file')->getClientOriginalExtension(); // getting file extension
+          //$fileName = rand(11111,99999).'.'.$extension; // renameing file
+          $filename = $request->file('file')->getClientOriginalName();
+          $request->file('file')->move($destinationPath, $filename); // uploading file to given path
+
+          // Input ke database
+          $file = new FileModel;
+          $file->uuid        = Uuid::uuid4();
+          $file->case_id     = $request->case_id;
+          $file->case_uuid   = $request->case_uuid;
+          $file->name        = $request->name;
+          $file->url         = 'http://sibankum.local/'.$destinationPath.$filename.'';
+          $file->description = $request->description;
+          $file->filename    = $filename;
+          $file->save();
+
+          // sending back with message
+          Session::flash('success', '<h2>Upload successfully</h2> File Path : <p id="p1">http://sibankum.local/uploads/'.$filename.'</p>&nbsp;<button onclick="copyToClipboard(\'p1\')">Copy To Clipboard</button>'); 
+          //return Redirect::to('upload');
+          return Redirect::to('/case/show/'.$case_uuid.'#berkas');
+        }
+        else {
+          // sending back with error message.
+          Session::flash('error', 'uploaded file is not valid');
+          return Redirect::to('/case/show/'.$case_uuid.'#berkas');
         }
       }
     }
@@ -123,8 +178,19 @@ class FileController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+       $uuid = $request->uuid;
+
+       // Tampilka data Perkara
+        $file = FileModel::where('uuid', $uuid)->first();
+
+        $case_uuid = $file->case_uuid;
+
+        Storage::disk('sibankum')->delete('/'.$case_uuid.'/'.$file->filename);
+
+        //Menghapus data berkas dari databse
+        DB::table('files')->where('uuid', '=' ,$uuid)->delete();
+        return redirect("/case/show/".$case_uuid."#berkas");
     }
 }

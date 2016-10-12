@@ -436,6 +436,22 @@ Route::post('trialschedule/store', [
 ]);
 
 /*
+* Route Untuk Berkas
+*/
+Route::post('file/store', [
+	'as' => 'file.store',
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\FileController@uploadCaseFile',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+Route::get('file/destroy/{uuid?}', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\FileController@destroy',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+/*
 * Route Untuk Status Perkara (Case Status)
 */
 Route::post('casestatus/store', [
