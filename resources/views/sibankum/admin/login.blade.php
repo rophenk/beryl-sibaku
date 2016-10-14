@@ -424,7 +424,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END REGISTRATION FORM -->
 </div>
 <div class="copyright">
-	 2015 © Kementerian Pertanian Republik Indonesia.
+	 2016 © Kementerian Pertanian Republik Indonesia.
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
