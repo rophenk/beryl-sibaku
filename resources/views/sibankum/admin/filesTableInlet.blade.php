@@ -55,7 +55,6 @@
 												        </div>
 												    </div>
 												    <br/>
-												    * Upload Tipe File PDF
 												
 												</div>
 											</div>

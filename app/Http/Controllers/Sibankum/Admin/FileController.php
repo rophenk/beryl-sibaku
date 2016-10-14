@@ -55,7 +55,7 @@ class FileController extends Controller
           $filename = $prefix.$request->file('file')->getClientOriginalName();
           $request->file('file')->move($destinationPath, $filename); // uploading file to given path
           // sending back with message
-          Session::flash('success', '<h2>Upload successfully</h2> File Path : <p id="p1">http://sibankum.local/uploads/'.$filename.'</p>&nbsp;<button onclick="copyToClipboard(\'p1\')">Copy To Clipboard</button>'); 
+          Session::flash('success', '<h2>Upload successfully</h2> File Path : <p id="p1">http://sibankum.pertanian.go.id/uploads/'.$filename.'</p>&nbsp;<button onclick="copyToClipboard(\'p1\')">Copy To Clipboard</button>'); 
           //return Redirect::to('upload');
           return Redirect::to('file/'.$case_uuid);
         }
@@ -99,13 +99,13 @@ class FileController extends Controller
           $file->case_id     = $request->case_id;
           $file->case_uuid   = $request->case_uuid;
           $file->name        = $request->name;
-          $file->url         = 'http://sibankum.local/'.$destinationPath.$filename.'';
+          $file->url         = 'http://sibankum.pertanian.go.id/'.$destinationPath.$filename.'';
           $file->description = $request->description;
           $file->filename    = $filename;
           $file->save();
 
           // sending back with message
-          Session::flash('success', '<h2>Upload successfully</h2> File Path : <p id="p1">http://sibankum.local/uploads/'.$filename.'</p>&nbsp;<button onclick="copyToClipboard(\'p1\')">Copy To Clipboard</button>'); 
+          Session::flash('success', '<h2>Upload successfully</h2> File Path : <p id="p1">http://sibankum.pertanian.go.id/uploads/'.$filename.'</p>&nbsp;<button onclick="copyToClipboard(\'p1\')">Copy To Clipboard</button>'); 
           //return Redirect::to('upload');
           return Redirect::to('/case/show/'.$case_uuid.'#berkas');
         }

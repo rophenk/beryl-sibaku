@@ -145,7 +145,7 @@ $(document).ready( function () {
             <li><a href="#"><i class="ryl-icon-circle-border-3 icon-twitter"></i></a></li>
             <li><a href="#"><i class="ryl-icon-circle-border-3 icon-dribbble"></i></a></li>
           </ul>
-          <div class="ryl-footer-content">© 2014 - ALL RIGHTS RESERVED BY <a href="/index">SIBANKUM</a></div>
+          <div class="ryl-footer-content">© 2016 - ALL RIGHTS RESERVED BY <a href="/index">SIBANKUM</a></div>
         </div>
       </footer>
     </div>

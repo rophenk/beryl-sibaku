@@ -36,6 +36,13 @@ active open
 									<i class="icon-pin font-green"></i>
 									<span class="caption-subject bold uppercase"> Data Perkara</span>
 								</div>
+                                <div class="actions">
+                                    </a>
+                                    <a class="btn btn-circle btn-icon-only red" href="/case/destroy/{{ $case->uuid }}"  onclick="return confirmDelete();">
+                                        <i class="icon-trash"></i>
+                                    </a>
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title=""> </a>
+                                </div>
 							</div>
 							<div class="portlet-body form">
 								<form role="form" method="post" action="/case/update">

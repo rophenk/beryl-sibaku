@@ -632,7 +632,7 @@ Jakarta 12550</span><span class="ryl-info-item"><i class="ryl-icon-inline-text i
             <li><a href="#"><i class="ryl-icon-circle-border-3 icon-twitter"></i></a></li>
             <li><a href="#"><i class="ryl-icon-circle-border-3 icon-dribbble"></i></a></li>
           </ul>
-          <div class="ryl-footer-content">© 2015 - HAK CIPTA <a href="/index">KEMENTERIAN PERTANIAN REPUBLIK INDONESIA</a></div>
+          <div class="ryl-footer-content">© 2016 - HAK CIPTA <a href="/index">KEMENTERIAN PERTANIAN REPUBLIK INDONESIA</a></div>
         </div>
       </footer>
     </div>

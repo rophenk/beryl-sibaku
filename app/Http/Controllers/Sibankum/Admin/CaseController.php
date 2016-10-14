@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers\Sibankum\Admin;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Rhumsaa\Uuid\Uuid;
 use Rhumsaa\Uuid\Exception\UnsatisfiedDependencyException;
 use App\Http\Requests;
@@ -278,6 +278,9 @@ class CaseController extends Controller
      */
     public function destroy($uuid)
     {
+        //Hapus seluruh file nya
+        Storage::disk('sibankum')->deleteDirectory('/'.$uuid);
+
         //Menghapus data Server
         DB::table('case')->where('uuid', '=' ,$uuid)->delete();
         return redirect("/case");
