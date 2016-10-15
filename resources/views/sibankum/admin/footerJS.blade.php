@@ -42,3 +42,19 @@
 {!! Html::script('sbk/admin/assets/admin/layout2/scripts/demo.js') !!}
 {!! Html::script('sbk/admin/assets/admin/pages/scripts/index.js') !!}
 {!! Html::script('sbk/admin/assets/admin/pages/scripts/tasks.js') !!}
+<script type="text/javascript">
+	$('#case_type_id').change(function()
+		{
+			console.log('case_type selected');
+		    $.get('/court_type/list_options/' + this.value + '', function(court_types)
+		    {
+		        var $state = $('#court_type_id');
+
+		        $state.find('option').remove().end();
+
+		        $.each(court_types, function(index, court_type) {
+		            $state.append('<option value="' + court_type.id + '">' + court_type.name + '</option>');
+		        });
+		    });
+		});
+</script>

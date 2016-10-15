@@ -15,6 +15,7 @@ class CreateCourtType extends Migration
         // Buat Court Type
          Schema::create('court_type', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('case_type_id')->unsigned()->nullable();
             $table->string('uuid', 36);
             $table->string('name');
             $table->string('alias');

@@ -38,7 +38,7 @@ active open
 								</div>
                                 <div class="actions">
                                     </a>
-                                    <a class="btn btn-circle btn-icon-only red" href="/case/destroy/{{ $case->uuid }}"  onclick="return confirmDelete();">
+                                    <a class="btn btn-circle btn-icon-only red" href="/case/destroy/{{ $case->uuid }}" onclick="return confirmDelete();">
                                         <i class="icon-trash"></i>
                                     </a>
                                     <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title=""> </a>

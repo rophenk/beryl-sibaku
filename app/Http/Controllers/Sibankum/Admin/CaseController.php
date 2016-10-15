@@ -278,6 +278,20 @@ class CaseController extends Controller
      */
     public function destroy($uuid)
     {
+        // ambil Fil yang url disimpan di database
+        $case = CaseModel::where('uuid', $uuid)->first();
+        $url = $case->address;
+
+        //Hapus File yang urlnya disimpan di database
+        //$file = file_get_contents($url); // to get file
+        $name = basename($url); // to get file name
+        $ext = pathinfo($url, PATHINFO_EXTENSION); // to get extension
+        $name2 =pathinfo($url, PATHINFO_FILENAME); //file name without extension
+        if(!empty($url)) 
+        {
+            Storage::disk('sibankum')->delete($name2.'.'.$ext);
+        }
+
         //Hapus seluruh file nya
         Storage::disk('sibankum')->deleteDirectory('/'.$uuid);
 

@@ -56,12 +56,13 @@ active open
 											<select class="form-control" id="court_type_id" name="court_type_id">
 												<option>=== PILIH JENIS PENGADILAN ===</option>
 												@forelse ($court_type_options as $court_type)
-												<option value="{{ $court_type->id }}">{{ $court_type->name }}</option>
+												<!--<option value="{{ $court_type->id }}">{{ $court_type->name }}</option>-->
 												@empty
 												<option>Belum ada data Jenis Pengadilan</option>
 												@endforelse
 											</select>
 										</div>
+										
 										<div class="form-group form-md-line-input form-md-floating-label">
 											<input type="text" class="form-control" id="number" name="number">
 											<label for="number">Nomor</label>

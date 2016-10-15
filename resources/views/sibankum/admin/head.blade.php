@@ -32,7 +32,22 @@
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="{{ asset('sbk/favicon.png') }}"/>
 <script language="javascript">
-            function confirmDelete() {
-                return confirm("Yakin akan menghapus data ini ?");
-            }
-        </script>
+    function confirmDelete() {
+        return confirm();
+    }
+    function showOptions(s) {
+	  console.log(s[s.selectedIndex].value); // get value
+	  console.log(s[s.selectedIndex].id); // get id
+	  
+	  if (s[s.selectedIndex].value) {
+			if (s[s.selectedIndex].id == 'delete') {
+				if(confirm("Yakin akan menghapus data ini ?") && s[s.selectedIndex].id == 'delete') {
+					window.location.href=s[s.selectedIndex].value
+				}
+				
+			} else {
+				window.location.href=s[s.selectedIndex].value
+			}
+		}
+	}
+</script>

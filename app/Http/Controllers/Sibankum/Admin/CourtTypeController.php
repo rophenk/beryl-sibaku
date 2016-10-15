@@ -8,6 +8,7 @@ use Rhumsaa\Uuid\Exception\UnsatisfiedDependencyException;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Sibankum\CourtType;
+use App\Models\Sibankum\CaseType;
 use DB;
 
 class CourtTypeController extends Controller
@@ -22,7 +23,10 @@ class CourtTypeController extends Controller
         $user       = $request->user();
         // Tampilkan semua data Instansi
         $courtType = CourtType::all();
-        return view('sibankum.admin.courtTypeTable', ['court_type' => $courtType, 'user' => $user]);
+        return view('sibankum.admin.courtTypeTable', [
+            'court_type' => $courtType, 
+            'user' => $user
+            ]);
     }
 
     /**
@@ -33,8 +37,12 @@ class CourtTypeController extends Controller
     public function create(Request $request)
     {
          $user       = $request->user();
-        // Tampilkan Form Instansi
-        return view('sibankum.admin.courtTypeForm', ['user' => $user]);
+        // Tampilkan semua data Jenis Perkara
+        $caseType = CaseType::all();
+        return view('sibankum.admin.courtTypeForm', [
+            'case_type_options' => $caseType,
+            'user' => $user
+            ]);
     }
 
     /**
@@ -47,6 +55,7 @@ class CourtTypeController extends Controller
     {
         // Validate the request...
         $court_type = new CourtType;
+        $court_type->case_type_id = $request->case_type_id;
         $court_type->uuid = Uuid::uuid4();
         $court_type->name = $request->name;
         $court_type->alias = $request->alias;
@@ -78,8 +87,13 @@ class CourtTypeController extends Controller
         $court_type = CourtType::where('uuid', $request->uuid)
                                     ->get();
 
+        $caseType = CaseType::all();
         //Tampilkan Form yang terisi data
-        return view('sibankum.admin.courtTypeFormEdit', ['court_type' => $court_type, 'user' => $user]);
+        return view('sibankum.admin.courtTypeFormEdit', [
+            'court_type' => $court_type,
+            'case_type_options' => $caseType,
+            'user' => $user
+            ]);
     }
 
     /**
@@ -94,6 +108,7 @@ class CourtTypeController extends Controller
         //Validate the request...
         CourtType::where('uuid' ,$request->uuid)
         ->update([
+            'case_type_id' => $request->case_type_id, 
             'name' => $request->name, 
             'alias' => $request->alias 
             ]);
@@ -111,5 +126,12 @@ class CourtTypeController extends Controller
         // Menghapus data
         DB::table('court_type')->where('uuid', '=' ,$uuid)->delete();
         return redirect("/court_type");    
+    }
+
+    public function listByCaseType($case_type_id)
+    {
+        $court_type = CourtType::where('case_type_id', $case_type_id)
+                                    ->get();
+        return $court_type;
     }
 }

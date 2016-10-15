@@ -22,7 +22,7 @@ Route::get('/lala', function () {
 
 /*Route::resource('/', 'Sibankum\SibankumController');*/
 Route::resource('/', 'IndexLoginController@login');
-Route::get('index', 'Sibankum\SibankumController@demo');
+/*Route::get('index', 'Sibankum\SibankumController@demo');*/
 Route::get('indexlogin', 'IndexLoginController@login');
 Route::post('indexlogin', 'IndexLoginController@postLogin');
 Route::post('result', 'Sibankum\SearchController@result');
@@ -31,6 +31,15 @@ Route::get('detail/{uuid?}', 'Sibankum\SearchController@show');
 Route::get('login', 'LoginController@login');
 Route::post('login', 'LoginController@postLogin');
 Route::get('logout', 'LoginController@logout');
+
+/**
+ * Route Untuk menampilkan Dashboard / Home
+ */
+Route::get('index', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\SibankumController@demo',
+	'roles' => ['root', 'administrator', 'manager', 'user', 'external'] // Roles that can access this route
+]);
 
 /**
  * Route Untuk menampilkan Dashboard / Home
@@ -121,6 +130,9 @@ Route::get('court_type/destroy/{uuid?}', [
 	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
 	'uses' => 'Sibankum\Admin\CourtTypeController@destroy',
 	'roles' => ['administrator'] // Only an administrator, or a manager can access this route
+]);
+Route::get('court_type/list_options/{case_type_id?}', [
+	'uses' => 'Sibankum\Admin\CourtTypeController@listByCaseType'
 ]);
 
 /**

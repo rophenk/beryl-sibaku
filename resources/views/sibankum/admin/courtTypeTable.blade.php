@@ -71,6 +71,10 @@ $addbutton = '<div class="row">
 									<th class="table-checkbox">
 										<input type="checkbox" class="group-checkable" data-set="#court_type .checkboxes"/>
 									</th>
+
+									<th>
+										 Jenis Perkara
+									</th>
 									<th>
 										 Nama Jenis Pengadilan
 									</th>
@@ -102,6 +106,10 @@ $addbutton = '<div class="row">
 									<tr class="odd gradeX">
 									<td>
 										<input type="checkbox" class="checkboxes" value="1"/>
+									</td>
+
+									<td>
+										 {{ $court_type->case_type->name }}
 									</td>
 									<td>
 										 {{ $court_type->name }}

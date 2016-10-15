@@ -57,9 +57,10 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN LOGO -->
 <div class="logo">
 	<a href="/index">
-	<!--<img src="{{ asset('sbk/admin/assets/admin/layout2/img/logo-kementan.png') }}" alt=""/>
-	{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-default.png', 'logo', array('class' => 'logo-default')) !!}-->
-	<h1 style="color:#cccccc">SIBANKUM</h1>
+	<img src="{{ asset('sbk/assets/images/logo.png') }}" alt="" width="150px" />
+	<!--{!! Html::image('/sbk/admin/assets/admin/layout2/img/logo-default.png', 'logo', array('class' => 'logo-default')) !!}-->
+	<h2 style="color:#cccccc">Sistem Informasi Bantuan Hukum</h2>
+	<h3 style="color:#cccccc">Biro Hukum Sekretariat Jenderal Kementerian Pertanian</h3>
 	</a>
 </div>
 <!-- END LOGO -->

@@ -42,6 +42,17 @@ active open
 								<form role="form" method="post" action="/court_type/store">
 									{!! csrf_field() !!}
 									<div class="form-body">
+										<div class="form-group">
+											<label>Jenis Perkara</label>
+											<select class="form-control" id="case_type_id" name="case_type_id">
+												<option>=== PILIH JENIS PERKARA ===</option>
+												@forelse ($case_type_options as $case_type)
+												<option value="{{ $case_type->id }}">{{ $case_type->name }}</option>
+												@empty
+												<option>Belum ada Jenis Perkara</option>
+												@endforelse
+											</select>
+										</div>
 										<div class="form-group form-md-line-input form-md-floating-label">
 											<input type="text" class="form-control" id="name" name="name" />
 											<label for="name">Nama</label>

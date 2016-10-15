@@ -30,7 +30,11 @@ class UserController extends Controller
 
         $role_id = $request->user()->role_id;
         $user       = $request->user();
-        return view('sibankum.admin.userTable', ['user_info' => $userInfo, 'role_id' => $role_id, 'user' => $user]);
+        return view('sibankum.admin.userTable', [
+            'user_info' => $userInfo, 
+            'role_id' => $role_id, 
+            'user' => $user
+            ]);
     }
 
     /**
@@ -49,7 +53,11 @@ class UserController extends Controller
         $role_options = Role::all();
 
         // Tampilkan Form User
-        return view('sibankum.admin.userForm', ['instansi_options' => $instansi_options, 'role_options' => $role_options, 'user' => $user]);
+        return view('sibankum.admin.userForm', [
+            'instansi_options' => $instansi_options, 
+            'role_options' => $role_options, 
+            'user' => $user
+            ]);
     }
 
     /**
@@ -67,6 +75,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->password);
         $user->instansi_id = $request->instansi_id;
         $user->role_id = $request->role_id;
+        $user->api_token = str_random(60);
         $user->save();
         return redirect("/users");
     }
@@ -103,7 +112,12 @@ class UserController extends Controller
         $role_options = Role::all();
 
         // Tampilkan Form User
-        return view('sibankum.admin.userFormEdit', ['instansi_options' => $instansi_options, 'role_options' => $role_options, 'user' => $user, 'userdb' => $userdb]);
+        return view('sibankum.admin.userFormEdit', [
+            'instansi_options' => $instansi_options, 
+            'role_options' => $role_options, 
+            'user' => $user, 
+            'userdb' => $userdb
+            ]);
 
     }
 
