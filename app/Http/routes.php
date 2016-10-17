@@ -10,6 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+$options = [
+    'prefix' => 'api/v1', 
+    'namespace' => 'Api', 
+    'middleware' => 'auth.api',
+];
+
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
@@ -488,3 +494,27 @@ Route::post('file/upload', [
 	'uses' => 'Sibankum\Admin\FileController@upload',
 	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
 ]);
+/*
+* Route Untuk Mobile Web SIBANKUM
+*/
+Route::group(['prefix' => '/api/v1', 'middleware' => 'auth.api', 'middleware' => 'cors'], function () {
+  
+  /*Route::resource('/list-incoming', 'Tnde\APIIncoming@index');
+  Route::get('/inbox/{id?}', 'Tnde\APIIncoming@userInbox');
+  Route::get('/view-incoming/{id?}', 'Tnde\APIIncoming@show');
+  Route::get('/attachment-incoming/{incomingID?}', 'Tnde\APIIncoming@attachmentIncoming');
+  Route::get('/read/{id?}/{user_id?}', 'Tnde\APIIncoming@markRead');
+  Route::get('/action/{id?}/{action?}', 'Tnde\APIIncoming@action');
+  Route::post('/add-incoming/{user_id?}', 'Tnde\APIIncoming@store');
+  Route::post('/attribute-incoming/{uuid?}', 'Tnde\APIIncoming@storeattribute');*/
+
+});
+
+Route::group(['prefix' => '/api/v1', 'middleware' => 'cors'], function () {
+  
+  Route::get('/test', 'Sibankum\APICaseController@index');
+  Route::post('/result', 'Sibankum\APICaseController@result');
+  /*Route::post('api/authenticate', 'Tnde\AuthenticationController@authenticate');
+  Route::get('api/authenticate', 'Tnde\AuthenticationController@userInbox');*/
+
+});
