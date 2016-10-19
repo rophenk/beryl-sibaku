@@ -15,6 +15,7 @@ class VerifyCsrfToken extends BaseVerifier
         //
     	'api/v1/test',
     	'api/v1/result',
+        'api/v1/authenticate',
     ];
     /*public function handle($request, Closure $next)
     {
