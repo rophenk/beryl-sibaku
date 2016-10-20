@@ -35,6 +35,7 @@ class AuthenticationController extends Controller
           $user = Auth::user();
 
           return response()->json([
+            'status' => '200', 
             'success' => 'auth-authorized', 
             'token' => $user->api_token, 
             'user' => $user
@@ -43,7 +44,10 @@ class AuthenticationController extends Controller
         } else {
 
           return response()->json([
-            'error' => 'invalid_credentials'
+            'status' => '401',
+            'error' => 'invalid_credentials',
+            'email' => $request->email,
+            'password' => $request->password
             ], 401);
 
         }
