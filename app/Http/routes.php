@@ -515,6 +515,7 @@ Route::group(['prefix' => '/api/v1', 'middleware' => 'cors'], function () {
   Route::get('/test', 'Sibankum\APICaseController@index');
   Route::post('/result', 'Sibankum\APICaseController@result');
   Route::post('/authenticate', 'Sibankum\AuthenticationController@authenticate');
+  Route::get('/get_latest_case', 'Sibankum\APICaseController@getLatestCase');
   /*Route::post('api/authenticate', 'Tnde\AuthenticationController@authenticate');
   Route::get('api/authenticate', 'Tnde\AuthenticationController@userInbox');*/
 
