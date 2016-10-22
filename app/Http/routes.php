@@ -499,24 +499,14 @@ Route::post('file/upload', [
 */
 Route::group(['prefix' => '/api/v1', 'middleware' => 'auth.api', 'middleware' => 'cors'], function () {
   
-  /*Route::resource('/list-incoming', 'Tnde\APIIncoming@index');
-  Route::get('/inbox/{id?}', 'Tnde\APIIncoming@userInbox');
-  Route::get('/view-incoming/{id?}', 'Tnde\APIIncoming@show');
-  Route::get('/attachment-incoming/{incomingID?}', 'Tnde\APIIncoming@attachmentIncoming');
-  Route::get('/read/{id?}/{user_id?}', 'Tnde\APIIncoming@markRead');
-  Route::get('/action/{id?}/{action?}', 'Tnde\APIIncoming@action');
-  Route::post('/add-incoming/{user_id?}', 'Tnde\APIIncoming@store');
-  Route::post('/attribute-incoming/{uuid?}', 'Tnde\APIIncoming@storeattribute');*/
+  Route::post('/result', 'Sibankum\APICaseController@result');
 
 });
 
 Route::group(['prefix' => '/api/v1', 'middleware' => 'cors'], function () {
   
   Route::get('/test', 'Sibankum\APICaseController@index');
-  Route::post('/result', 'Sibankum\APICaseController@result');
   Route::post('/authenticate', 'Sibankum\AuthenticationController@authenticate');
   Route::get('/get_latest_case', 'Sibankum\APICaseController@getLatestCase');
-  /*Route::post('api/authenticate', 'Tnde\AuthenticationController@authenticate');
-  Route::get('api/authenticate', 'Tnde\AuthenticationController@userInbox');*/
 
 });

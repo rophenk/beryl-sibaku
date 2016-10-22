@@ -65,7 +65,7 @@ class APICaseController extends Controller
             'data' => $data
             ], 200);
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *

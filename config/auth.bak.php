@@ -15,29 +15,7 @@ return [
     |
     */
 
-    'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
-    ],
-
     'driver' => 'eloquent',
-
-    'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
-
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'usersAPI',
-        ],
-
-        /*'api' => [
-            'driver' => 'jwt',
-            'provider' => 'usersAPI',
-        ],*/
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -64,18 +42,6 @@ return [
     */
 
     'table' => 'users',
-
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\User::class,
-        ],
-
-        'usersAPI' => [
-             'driver' => 'database',
-             'table' => 'users',
-        ],
-    ],
 
     /*
     |--------------------------------------------------------------------------
