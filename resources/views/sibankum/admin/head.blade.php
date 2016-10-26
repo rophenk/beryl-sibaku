@@ -26,7 +26,6 @@
 {!! Html::style('sbk/admin/assets/admin/layout2/css/layout.css') !!}
 {!! Html::style('sbk/admin/assets/admin/layout2/css/custom.css') !!}
 {!! Html::style('sbk/admin/assets/global/plugins/font-awesome/css/font-awesome.min.css') !!}
-{!! Html::style('sbk/admin/assets/global/plugins/font-awesome/css/font-awesome.min.css') !!}
 <link href="{{ asset('sbk/admin/assets/global/css/components-md.css') }}" id="style_components" rel="stylesheet" type="text/css"/>
 <link href="{{ asset('sbk/admin/assets/admin/layout2/css/themes/grey.css') }}" rel="stylesheet" type="text/css" id="style_color"/>
 <!-- END THEME STYLES -->

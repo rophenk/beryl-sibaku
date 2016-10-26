@@ -508,5 +508,6 @@ Route::group(['prefix' => '/api/v1', 'middleware' => 'cors'], function () {
   Route::get('/test', 'Sibankum\APICaseController@index');
   Route::post('/authenticate', 'Sibankum\AuthenticationController@authenticate');
   Route::get('/get_latest_case', 'Sibankum\APICaseController@getLatestCase');
+  Route::get('/detail/{uuid?}', 'Sibankum\APICaseController@show');
 
 });

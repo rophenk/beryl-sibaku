@@ -4,12 +4,14 @@
 <script src="sbk/admin/assets/global/plugins/respond.min.js"></script>
 <script src="sbk/admin/assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
-{!! Html::script('sbk/admin/assets/global/plugins/jquery.min.js') !!}
+<!--{!! Html::script('sbk/admin/assets/global/plugins/jquery.min.js') !!}-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 {!! Html::script('sbk/admin/assets/global/plugins/jquery-migrate.min.js') !!}
 <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 {!! Html::script('sbk/admin/assets/global/plugins/jquery-ui/jquery-ui.min.js') !!}
-{!! Html::script('sbk/admin/assets/global/plugins/bootstrap/js/bootstrap.min.js') !!}
-<!--{!! Html::script('sbk/admin/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') !!}-->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!--{!! Html::script('sbk/admin/assets/global/plugins/bootstrap/js/bootstrap.min.js') !!}-->
+{!! Html::script('sbk/admin/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') !!}
 {!! Html::script('sbk/admin/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') !!}
 {!! Html::script('sbk/admin/assets/global/plugins/jquery.blockui.min.js') !!}
 {!! Html::script('sbk/admin/assets/global/plugins/jquery.cokie.min.js') !!}
