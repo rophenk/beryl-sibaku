@@ -147,9 +147,14 @@ class APICaseController extends Controller
                 ->get();
 
         return response()->json([
-            'status' => '200', 
+            'status'  => '200', 
             'success' => 'Record Found',
-            'data' => $detailcase
+            'data'    => $detailcase,
+            'party_side1' => $party_side1,
+            'party_side2' => $party_side2,
+            'trial_schedule' => $trial_schedule,
+            'case_status' => $case_status,
+            'case_files' => $case_files
             ], 200);
     
     }
