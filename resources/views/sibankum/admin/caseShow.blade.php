@@ -60,14 +60,16 @@ active open
 
 											$content = '<h4>Obyek Perkara</h4><hr /><p>'.$case->object.'</p>';
 
-										}if($case->court_type_id === 3) {
+										}elseif($case->court_type_id === 3) {
 
 											$content = '<h4>Pokok Permohonan</h4><hr /><p>'.$case->proposal.'</p>';
 
-										}if($case->court_type_id === 4) {
+										}elseif($case->court_type_id === 4) {
 
 											$content = '<h4>Pokok Permohonan</h4><hr /><p>'.$case->proposal.'</p>';
 
+										}else{
+											$content = '<h4>Obyek Perkara</h4><hr /><p>'.$case->object.'</p>';
 										}
 										?>
 										<?php echo $content; ?>

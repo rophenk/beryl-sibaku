@@ -180,6 +180,41 @@ $(function() {
         } else {
             $('#object').hide(); 
         }
+        if($('#court_type_id').val() == '9') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '10') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '11') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '12') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '13') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '14') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '15') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
     });
 });
 </script>
