@@ -160,6 +160,26 @@ $(function() {
         } else {
             $('#proposal2').hide(); 
         }
+        if($('#court_type_id').val() == '5') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '6') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '7') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
+        if($('#court_type_id').val() == '8') {
+            $('#object').show(); 
+        } else {
+            $('#object').hide(); 
+        }
     });
 });
 </script>

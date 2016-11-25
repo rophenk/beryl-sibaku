@@ -45,7 +45,7 @@ active open
 										<div class="form-group">
 											<label>Jenis Perkara</label>
 											<select class="form-control" id="case_type_id" name="case_type_id">
-												<option>=== PILIH JENIS PERKARA ===</option>
+												<option value="2">=== PILIH JENIS PERKARA ===</option>
 												@forelse ($case_type_options as $case_type)
 												<option value="{{ $case_type->id }}">{{ $case_type->name }}</option>
 												@empty
