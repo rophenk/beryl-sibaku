@@ -152,6 +152,8 @@ var count = 0;
 
 $(document).on('click', '.new-row', function() {
 
+	document.getElementById('btnHolder1').innerHTML = '<button type="button" class="btn default" data-dismiss="modal">Close</button><button type="submit" class="btn blue" id="">Save changes</button>';
+
     count++;
 
     var name = $('#newlink input[name=name]').val();
@@ -190,7 +192,7 @@ $(document).on('click', '.new-row', function() {
 var count = 0;
 
 $(document).on('click', '.new-row2', function() {
-
+	document.getElementById('btnHolder2').innerHTML = '<button type="button" class="btn default" data-dismiss="modal">Close</button><button type="submit" class="btn blue" id="">Save changes</button>';
     count++;
 
     var name2 = $('#newlink2 input[name=name2]').val();
@@ -226,7 +228,7 @@ $(document).on('click', '.new-row2', function() {
 var count = 0;
 
 $(document).on('click', '.new-row3', function() {
-
+	document.getElementById('btnHolder3').innerHTML = '<button type="button" class="btn default" data-dismiss="modal">Close</button><button type="submit" class="btn blue" id="">Save changes</button>';
     count++;
 
     var date_start = $('#newlink3 input[name=date_start]').val();
@@ -258,7 +260,7 @@ $(document).on('click', '.new-row3', function() {
 var count = 0;
 
 $(document).on('click', '.new-row4', function() {
-
+	document.getElementById('btnHolder4').innerHTML = '<button type="button" class="btn default" data-dismiss="modal">Close</button><button type="submit" class="btn blue" id="">Save changes</button>';
     count++;
 
     var court_level_id = $('#newlink4 select[name=court_level_id]').val();

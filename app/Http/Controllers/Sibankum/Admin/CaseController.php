@@ -295,8 +295,21 @@ class CaseController extends Controller
         //Hapus seluruh file nya
         Storage::disk('sibankum')->deleteDirectory('/'.$uuid);
 
-        //Menghapus data Server
+        //Menghapus data File di DB
+        DB::table('files')->where('case_uuid', '=' ,$uuid)->delete();
+
+        //Menghapus data Pihak-pihak di database
+        DB::table('case_party')->where('case_id', '=' ,$case->id)->delete();
+
+        //Menghapus data Jadwal Sidang di database
+        DB::table('trial_schedule')->where('case_id', '=' ,$case->id)->delete();
+
+        //Menghapus data Status Putusan di database
+        DB::table('case_status')->where('case_id', '=' ,$case->id)->delete();
+
+        //Menghapus data Kasus
         DB::table('case')->where('uuid', '=' ,$uuid)->delete();
+
         return redirect("/case");
     }
 

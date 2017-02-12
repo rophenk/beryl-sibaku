@@ -60,8 +60,9 @@
 												</div>
 											</div>
 											<div class="modal-footer">
+												<div id="btnHolder3">
 												<button type="button" class="btn default" data-dismiss="modal">Close</button>
-												<button type="submit" class="btn blue">Save changes</button>
+												</div>
 											</div>
 											{!! Form::close() !!}
 										</div>

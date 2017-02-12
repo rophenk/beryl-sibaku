@@ -65,8 +65,10 @@
 												</div>
 											</div>
 											<div class="modal-footer">
+												<div id="btnHolder1">
 												<button type="button" class="btn default" data-dismiss="modal">Close</button>
-												<button type="submit" class="btn blue">Save changes</button>
+												</div>
+												<!--<button type="submit" class="btn blue">Save changes</button>-->
 											</div>
 											{!! Form::close() !!}
 										</div>
@@ -170,7 +172,7 @@
 												        	{!! Form::hidden('case_uuid2', $case->case_uuid) !!}
 												        	{!! Form::hidden('case_number2', $case->number) !!}
 												        	{!! Form::hidden('side', '2') !!}
-												            <button class="btn btn-primary submit new-row2" type="button">Add Row</button>
+												            <button class="btn btn-primary submit new-row2" type="button" id="add-row">Add Row</button>
 												        </div>
 												    </div>
 
@@ -181,8 +183,10 @@
 												</div>
 											</div>
 											<div class="modal-footer">
+												<div id="btnHolder2">
 												<button type="button" class="btn default" data-dismiss="modal">Close</button>
-												<button type="submit" class="btn blue">Save changes</button>
+												</div>
+												<!--<button type="submit" class="btn blue" id="">Save changes</button>-->
 											</div>
 											{!! Form::close() !!}
 										</div>
