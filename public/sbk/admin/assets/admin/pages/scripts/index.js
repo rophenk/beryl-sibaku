@@ -623,8 +623,123 @@ var Index = function () {
 
             $('#dashboard-report-range span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
             $('#dashboard-report-range').show();
+        },
+
+        initAmChart3: function() {
+            if (typeof(AmCharts) === 'undefined' || $('#dashboard_amchart_3').size() === 0) {
+                return;
+            }
+
+            var chart = AmCharts.makeChart("dashboard_amchart_3", {
+                "type": "serial",
+                "addClassNames": true,
+                "theme": "light",
+                "path": "../assets/global/plugins/amcharts/ammap/images/",
+                "autoMargins": false,
+                "marginLeft": 30,
+                "marginRight": 8,
+                "marginTop": 10,
+                "marginBottom": 26,
+                "balloon": {
+                    "adjustBorderColor": false,
+                    "horizontalPadding": 10,
+                    "verticalPadding": 8,
+                    "color": "#ffffff"
+                },
+
+                "dataProvider": [{
+                    "year": 2009,
+                    "income": 23.5,
+                    "expenses": 21.1
+                }, {
+                    "year": 2010,
+                    "income": 26.2,
+                    "expenses": 30.5
+                }, {
+                    "year": 2011,
+                    "income": 30.1,
+                    "expenses": 34.9
+                }, {
+                    "year": 2012,
+                    "income": 29.5,
+                    "expenses": 31.1
+                }, {
+                    "year": 2013,
+                    "income": 30.6,
+                    "expenses": 28.2,
+                }, {
+                    "year": 2014,
+                    "income": 34.1,
+                    "expenses": 32.9,
+                    "dashLengthColumn": 5,
+                    "alpha": 0.2,
+                    "additional": "(projection)"
+                }],
+                "valueAxes": [{
+                    "axisAlpha": 0,
+                    "position": "left"
+                }],
+                "startDuration": 1,
+                "graphs": [{
+                    "alphaField": "alpha",
+                    "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
+                    "fillAlphas": 1,
+                    "title": "Income",
+                    "type": "column",
+                    "valueField": "income",
+                    "dashLengthField": "dashLengthColumn"
+                }, {
+                    "id": "graph2",
+                    "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
+                    "bullet": "round",
+                    "lineThickness": 3,
+                    "bulletSize": 7,
+                    "bulletBorderAlpha": 1,
+                    "bulletColor": "#FFFFFF",
+                    "useLineColorForBulletBorder": true,
+                    "bulletBorderThickness": 3,
+                    "fillAlphas": 0,
+                    "lineAlpha": 1,
+                    "title": "Expenses",
+                    "valueField": "expenses"
+                }],
+                "categoryField": "year",
+                "categoryAxis": {
+                    "gridPosition": "start",
+                    "axisAlpha": 0,
+                    "tickLength": 0
+                },
+                "export": {
+                    "enabled": true
+                }
+            });
+        },
+
+        init: function() {
+
+            // this.initJQVMAP();
+            // this.initCalendar();
+            // this.initCharts();
+            // this.initEasyPieCharts();
+            // this.initSparklineCharts();
+            // this.initChat();
+            // this.initDashboardDaterange();
+            // this.initMorisCharts();
+
+            // this.initAmChart1();
+            // this.initAmChart2();
+            this.initAmChart3();
+            // this.initAmChart4();
+
+            // this.initWorldMapStats();
         }
 
     };
 
 }();
+
+if (App.isAngularJsApp() === false) {
+    jQuery(document).ready(function() {
+        Index.init(); // init metronic core componets
+    });
+}

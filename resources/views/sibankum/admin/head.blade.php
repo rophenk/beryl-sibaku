@@ -16,6 +16,7 @@
 {!! Html::style('sbk/admin/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') !!}
 {!! Html::style('sbk/admin/assets/global/plugins/fullcalendar/fullcalendar.min.css') !!}
 {!! Html::style('sbk/admin/assets/global/plugins/jqvmap/jqvmap/jqvmap.css') !!}
+{!! Html::style('sbk/admin/assets/global/plugins/morris/morris.css') !!}
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
 {!! Html::style('sbk/admin/assets/admin/pages/css/tasks.css') !!}

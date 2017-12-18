@@ -32,17 +32,24 @@
 {!! Html::script('sbk/admin/assets/global/plugins/jquery.pulsate.min.js') !!}
 {!! Html::script('sbk/admin/assets/global/plugins/bootstrap-daterangepicker/moment.min.js') !!}
 {!! Html::script('sbk/admin/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/morris/morris.min.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/morris/raphael-min.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/counterup/jquery.waypoints.min.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/counterup/jquery.counterup.min.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/amcharts/amcharts/amcharts.js') !!}
+{!! Html::script('sbk/admin/assets/global/plugins/amcharts/amcharts/serial.js') !!}
 <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
 {!! Html::script('sbk/admin/assets/global/plugins/fullcalendar/fullcalendar.min.js') !!}
 {!! Html::script('sbk/admin/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js') !!}
 {!! Html::script('sbk/admin/assets/global/plugins/jquery.sparkline.min.js') !!}
 <!-- END PAGE LEVEL PLUGINS -->
+{!! Html::script('sbk/admin/assets/global/scripts/app.min.js') !!}
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 {!! Html::script('sbk/admin/assets/global/scripts/metronic.js') !!}
 {!! Html::script('sbk/admin/assets/admin/layout2/scripts/layout.js') !!}
 {!! Html::script('sbk/admin/assets/admin/layout2/scripts/quick-sidebar.js') !!}
 {!! Html::script('sbk/admin/assets/admin/layout2/scripts/demo.js') !!}
-{!! Html::script('sbk/admin/assets/admin/pages/scripts/index.js') !!}
+<!-- {!! Html::script('sbk/admin/assets/admin/pages/scripts/index.js') !!} -->
 {!! Html::script('sbk/admin/assets/admin/pages/scripts/tasks.js') !!}
 <script type="text/javascript">
 	$('#case_type_id').change(function()

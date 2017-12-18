@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js">
-  
-<!-- Mirrored from demo.themeroyal.info/madrin/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Aug 2015 08:44:47 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SIBANKUM | Sistem Informasi Bantuan Hukum</title>
