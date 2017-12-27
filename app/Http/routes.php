@@ -57,6 +57,32 @@ Route::get('home', [
 ]);
 
 /**
+ * Route Untuk menampilkan Statistik Perkata
+ */
+Route::get('case_statistics', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\StatisticsController@index',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+Route::post('case_statistics_yearly', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\StatisticsController@showYearly',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+Route::post('case_statistics_monthly', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\StatisticsController@showMonthly',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+Route::post('case_statistics_daily', [
+	'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
+	'uses' => 'Sibankum\Admin\StatisticsController@showDaily',
+	'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+]);
+
+/**
  * Route untuk menampilkan data Case Type
  */
 Route::get('case_type', [
