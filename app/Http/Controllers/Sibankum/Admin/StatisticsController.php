@@ -44,6 +44,7 @@ class StatisticsController extends Controller
         return view('sibankum.admin.caseStatisticsCharts', [
             'user' => $user,
             'title' => 'Jumlah Perkara perTahun',
+            'countData' => count($data),
             'data' => $data
         ]);
     }
