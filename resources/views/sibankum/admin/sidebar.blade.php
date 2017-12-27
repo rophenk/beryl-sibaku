@@ -30,7 +30,19 @@
 							</li>
 						</ul>
 					</li>
-					
+					<li class="@yield('statistic-active')">
+						<a href="javascript:;">
+						<i class="icon-graph"></i>
+						<span class="title">Statistics</span>
+						<span class="selected"></span>
+						<span class="arrow open"></span>
+						</a>
+						<ul class="sub-menu">
+							<li class="@yield('statistic-active')">
+								<a href="/case_statistics">Statistik Perkara</a>
+							</li>
+						</ul>
+					</li>
 					<li class="@yield('instansi-active')">
 						<a href="javascript:;">
 						<i class="icon-cloud-upload"></i>

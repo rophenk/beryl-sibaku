@@ -21,9 +21,9 @@ class DashboardController extends Controller {
         $totalFiles = DB::table('files')->count();
         $totalParty = DB::table('case_party')->count();
 
-        $case2015 = DB::table('case')->whereBetween('created_at', ['2015-01-01 00:00:00', '2015-12-31 23:59:50'])->count();
-        $case2016 = DB::table('case')->whereBetween('created_at', ['2016-01-01 00:00:00', '2016-12-31 23:59:50'])->count();
-        $case2017 = DB::table('case')->whereBetween('created_at', ['2017-01-01 00:00:00', '2017-12-31 23:59:50'])->count();
+        $case2015 = DB::table('case')->whereBetween('created_at', ['2015-01-01 00:00:00', '2015-12-31 23:59:59'])->count();
+        $case2016 = DB::table('case')->whereBetween('created_at', ['2016-01-01 00:00:00', '2016-12-31 23:59:59'])->count();
+        $case2017 = DB::table('case')->whereBetween('created_at', ['2017-01-01 00:00:00', '2017-12-31 23:59:59'])->count();
 
         $latestCase = DB::table('case')
         		->select('case.uuid as uuid', 'case.work_unit', 'case.case_number', 'case.principal', 'case.object', 'case.proposal', 'case.created_at as date', 'court_type.id as court_type_id' , 'court_type.name as court_type', 'case_type.name as case_type')

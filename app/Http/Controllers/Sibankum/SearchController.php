@@ -126,6 +126,14 @@ class SearchController extends Controller
                 ->where('case_id', '=' , $case->case_id)
                 ->get();
 
+        // Log visitor Here
+        DB::table('log_case_detail')->insert(
+            ['case_id' => $case->case_id, 
+            'case_uuid' => $uuid,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')]
+        );
+
          return view('sibankum.detail', ['case' => $case, 'party_side1' => $party_side1, 'party_side2' => $party_side2, 'list_party1' => $list_party1, 'list_party2' => $list_party2, 'trial_schedule' => $trial_schedule, 'case_status' => $case_status]);
     }
 
