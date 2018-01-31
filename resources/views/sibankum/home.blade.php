@@ -11,7 +11,7 @@
     {!! Html::style('assets/plugins/fullPage/jquery.fullpage.min.css') !!}
     {!! Html::style('assets/plugins/owlCarousel/assets/owl.carousel.min.css') !!}
     {!! Html::style('assets/plugins/owlCarousel/assets/owl.theme.default.min.css') !!}
-    {!! Html::style('assets/sibankum.css') !!}
+    {!! Html::style('assets/css/sibankum.css') !!}
     <link rel="shortcut icon" href="{{ asset('assets/favicon.png') }}"/>
 </head>
 <body>
@@ -37,8 +37,8 @@
                 <h1>Sistem Informasi Bantuan Hukum</h1>
                 <h4>Mesin Pencari Dokumen Bantuan Hukum</h4>
                 <!-- <form class="form-search" action="/result" method="post" name="search" onsubmit="return required()"> -->
-                <form class="form-search" action="halaman.html" method="post" name="search" required>
-                    <input type="hidden" name="_token" value="0">
+                <form class="form-search" action="/result" method="post" name="search" required>
+                    {!! csrf_field() !!}
                     <div class="input-wrapper">
                         <input class="input-search" type="text" name="keyword" placeholder="Cari...">
                         <i class="fa fa-search" aria-hidden="true"></i>

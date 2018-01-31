@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    {!! Html::style('assets/sibankum.css') !!}
+    {!! Html::style('assets/css/sibankum.css') !!}
     <link rel="shortcut icon" href="{{ asset('assets/favicon.png') }}"/>
 </head>
 
@@ -32,9 +32,9 @@
   </nav>
 
     <div id="page">
-        <section class="section-page header dark" style="background-image: url('./assets/img/bg4.jpg')">
+        <section class="section-page header dark" style="background-image: url('/assets/img/bg4.jpg')">
             <div class="container">
-                <img class="logo" src="./assets/img/logo.png" alt="Logo">
+                <img class="logo" src="/assets/img/logo.png" alt="Logo">
                 <h1>Sistem Informasi Bantuan Hukum</h1>
                 <h4>Rincian Dokumen</h4>
             </div>
@@ -69,8 +69,14 @@
                 <p>Nomor Perkara</p>
                 <h5>{{ $case->case_number }}</h5>
                 <hr>
-
-                <p>{{ $party_side1->court_party_name }}</p>
+                <?php
+                  if (isset($party_side1->court_party_name)) {
+                    $party_side1_name = $party_side1->court_party_name; 
+                  } else {
+                    $party_side1_name = '';
+                  }
+                ?>
+                <p>{{ $party_side1_name }}</p>
                 <ul>
                   @forelse ($party_side1 as $party_side1)
                   <li><strong>{{ $party_side1->case_party_name }}</strong> - {{ $party_side1->description }}</li>
@@ -78,8 +84,14 @@
                   @endforelse
                 </ul>
                 <hr>
-
-                <p>{{ $party_side2->court_party_name }}</p>
+                <?php
+                  if (isset($party_side2->court_party_name)) {
+                    $party_side2_name = $party_side2->court_party_name; 
+                  } else {
+                    $party_side2_name = '';
+                  }
+                ?>
+                <p>{{ $party_side2_name }}</p>
                 <ul>
                   @forelse ($party_side2 as $party_side2)
                   <li><strong>{{ $party_side2->case_party_name }}</strong> - {{ $party_side2->description }}</li>
@@ -91,8 +103,30 @@
                 <p>Agenda</p>
                 <table class="table table-striped table-bordered">
                   @forelse ($trial_schedule as $trial_schedule)
+                  <?php
+                  // date formatting
+                  // remove zero time
+                  $timestampStart = strtotime($trial_schedule->date_start);
+                   if (date("H:i:s", $timestampStart) != "00:00:00") {
+                      $dmyStart = date("d-m-Y H:i:s", $timestampStart);
+                   } else {
+                      $dmyStart = date("d-m-Y", $timestampStart);
+                   }
+                  //Convert it to DD-MM-YYYY
+                  //$dmyStart = date("d-m-Y H:i:s", $timestampStart);
+                  if($trial_schedule->date_start < $trial_schedule->date_end){
+                    $timestampEnd = strtotime($trial_schedule->date_end);
+                   if (date("H:i:s", $timestampEnd) != "00:00:00") {
+                      $dmyEnd = ' s/d '.date("d-m-Y H:i:s", $timestampEnd);
+                   } else {
+                      $dmyEnd = ' s/d '.date("d-m-Y", $timestampEnd);
+                   }
+                  } else {
+                    $dmyEnd = '';
+                  }
+                  ?>
                   <tr>
-                    <td>{{ $trial_schedule->date_start }} s/d {{ $trial_schedule->date_end }}</td>
+                    <td>{{ $dmyStart }}{{ $dmyEnd }}</td>
                     <td>{{ $trial_schedule->agenda }}</td>
                   </tr>
                   @empty
