@@ -43,7 +43,7 @@
         </section>
         <section class="section-page list light">
             <div class="container">
-              <table id="table_id" class="table dataTable table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+              <table id="table_id" class="table dataTable table-striped table-bordered dt-responsive" cellspacing="0" width="100%">
                   <thead>
                       <tr>
                           <th>Jenis Perkara</th>
