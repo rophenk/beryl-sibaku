@@ -1,89 +1,49 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="id">
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SIBANKUM | Sistem Informasi Bantuan Hukum</title>
-    <link rel="shortcut icon" href="{{ asset('sbk/favicon.png') }}">
-    <meta name="description" content="Madrin Law">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hasil Pencarian | SIBANKUM (Sistem Informasi Bantuan Hukum)</title>
+    <meta name="description" content="SIBANKUM | Sistem Informasi Bantuan Hukum">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {!! Html::style('sbk/assets/styles/main.css') !!}
-    {!! Html::script('sbk/vendors/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') !!}<!-- 
-  <!-- DataTables CSS -->
-<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.css">
-  
-<!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-  
-<!-- DataTables -->
-<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.js"></script>
-<script type="text/javascript">
-$(document).ready( function () {
-    $('#table_id').DataTable();
-} );
-</script>
-  </head>
-  <body><!--[if lt IE 8]>
-    <p class="browsehappy">
-      You are using an <strong>outdated</strong> browser.
-      Please <a href="http://browsehappy.com/">upgrade your browser</a>
-      to improve your experience.
-    </p><![endif]-->
-    <div id="ryl-main-hamburger" class="ryl-hamburger"><i class="icon-menu"></i></div>
-    <div id="ryl-nav-right" class="ryl-nav-right">
-      <div class="ryl-nav-right-content-wrapper">
-        <div class="ryl-close-nav-right"><i class="icon-wrong6"></i></div>
-        <header><a href="/index">
-            <div class="ryl-madrin-logo-1"></div>
-            <h4>SIBANKUM</h4></a></header>
-        <ul class="ryl-nav-right-content">
-          <li><a href="/index#home">BERANDA</a></li>
-          <li><a href="/index#about">TENTANG</a></li>
-          <!--<li><a href="/index#case-study">STUDI KASUS</a></li>
-          <li><a href="/index#service">LAYANAN</a></li>
-          <li><a href="/index#testimonial">TESTIMONIAL</a></li>-->
-          <li><a href="/index#pricing-table">TERBARU</a></li>
-          <!--<li><a href="/index#process">PROCESS</a></li>
-          <li><a href="/index<#news">BERITA</a></li>-->
-          <li><a href="/index#contact">KONTAK</a></li>
-        </ul>
-        <footer>
-          <!--<ul class="ryl-list-inline-block">
-            <li><a href="#"><i class="ryl-icon-circle-border-2 icon-email29"></i></a></li>
-            <li><a href="#"><i class="ryl-icon-circle-border-2 icon-facebook"></i></a></li>
-            <li><a href="#"><i class="ryl-icon-circle-border-2 icon-twitter"></i></a></li>
-            <li><a data-target="#ryl-modal-search" data-toggle="modal"><i class="ryl-icon-circle-border-2 icon-search"></i></a></li>
-          </ul>-->
-        </footer>
-      </div>
-    </div>
-    <div id="ryl-main">
-      <header id="home" class="ryl-bg-dots ryl-color-light">
-        <div data-stellar-background-ratio="0.25" class="ryl-overlay-bg ryl-home-parallax-background-style-2 ryl-parallax-bg"></div>
-        <header id="ryl-home-header" class="clearfix ryl-home-header-style-2">
-          <div class="container-fluid">
-            <div class="row"></div>
-            <div class="col-md-4"><a href="/index" class="ryl-madrin-brand">
-                <div class="ryl-madrin-logo-2"></div>
-                <h4 class="ryl-light-heading"><center>SIBANKUM</center></h4></a></div>
-            <div class="ryl-home-header-right-side col-md-8 visible-md visible-lg">
-              <ul class="ryl-list-inline-block">
-                <lis><a href="/index#about" class="ryl-btn-trans-1"><i class="ryl-icon-inline-text icon-right106"></i>Tentang</a></lis>
-                <!--<li><a href="#"><i class="ryl-icon-circle-border-2 icon-email29"></i></a></li>
-                <li><a href="#"><i class="ryl-icon-circle-border-2 icon-facebook"></i></a></li>-->
-                <li><a href="#"><i class="ryl-icon-circle-border-2 icon-menu ryl-hamburger"></i></a></li>
-                <!--<li><a data-target="#ryl-modal-search" data-toggle="modal"><i class="ryl-icon-circle-border-2 icon-search"></i></a></li>-->
-              </ul>
-            </div>
-          </div>
-        </header>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.bootstrap4.css"/>
+    {!! Html::style('assets/css/sibankum.css') !!}
+    <link rel="shortcut icon" href="{{ asset('assets/favicon.png') }}"/>
+</head>
 
-      </header>
-      <section id="about" class="ryl-bg-light">
-        <header class="ryl-section-header-style-2 ryl-bg-gray">
-          <div class="container ryl-padding-top-20 ryl-padding-bottom-20">
-            <h4 class="ryl-margin-bottom-30">Hasil Pencarian</h4>
-            <p class="ryl-margin-bottom-30">
-              <table id="table_id" class="display">
+<body>
+
+  <nav class="menu">
+      <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+      <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+      </label>
+      <a href="index#beranda" class="menu-item tooltips"><span>Beranda</span> <i class="fa fa-home"></i> </a>
+      <a href="index#tentang" class="menu-item tooltips"><span>Tentang</span> <i class="fa fa-bank"></i> </a>
+      <a href="index#produk" class="menu-item tooltips"><span>Produk Hukum Pertanian</span> <i class="fa fa-gavel"></i> </a>
+      <a href="index#bantuan" class="menu-item tooltips"><span>Layanan Bantuan Hukum</span> <i class="fa fa-handshake-o"></i> </a>
+      <a href="index#visi-misi" class="menu-item tooltips"><span>Visi Misi</span> <i class="fa fa-balance-scale"></i> </a>
+      <a href="index#alur" class="menu-item tooltips"><span>Alur Penyelesaian Perkara</span> <i class="fa fa-retweet"></i> </a>
+      <a href="index#kontak" class="menu-item tooltips"><span>Kontak</span> <i class="fa fa-envelope-o"></i> </a>
+  </nav>
+
+    <div id="page">
+        <section class="section-page header dark" style="background-image: url('./assets/img/bg4.jpg')">
+            <div class="container">
+                <img class="logo" src="./assets/img/logo.png" alt="Logo">
+                <h1>Sistem Informasi Bantuan Hukum</h1>
+                <h4>Hasil Pencarian</h4>
+            </div>
+        </section>
+        <section class="section-page list light">
+            <div class="container">
+              <table id="table_id" class="table dataTable table-striped table-bordered dt-responsive" cellspacing="0" width="100%">
                   <thead>
                       <tr>
                           <th>Jenis Perkara</th>
@@ -95,7 +55,7 @@ $(document).ready( function () {
                   </thead>
                   <tbody>
                     @forelse ($data as $data)
-                      <?php 
+                      <?php
                         $materi = '';
                         if($data->id_jenis_perkara == '1') {
                           $materi = $data->principal;
@@ -110,12 +70,12 @@ $(document).ready( function () {
                           $materi = $data->proposal;
                         }
                       ?>
-                      <tr align="left">
+                      <tr>
                           <td>{{ $data->court_type }}</td>
                           <td>{{ $data->work_unit }}</td>
                           <td>{{ $data->case_number }}</td>
                           <td><?php echo $materi; ?></td>
-                          <td><a href="/detail/{{ $data->uuid }}"><button class="ryl-btn">Detil</button></a></td>
+                          <td><a href="/detail/{{ $data->uuid }}"><button class="btn btn-sm btn-success">Rincian</button></a></td>
                       </tr>
                     @empty
                     <tr>
@@ -128,26 +88,42 @@ $(document).ready( function () {
                     @endforelse
                   </tbody>
               </table>
-            </p>
-            <hr/>
-          </div>
-        </header>
-      </section>
-     
-      <footer class="ryl-footer-style-2">
-        <div class="container">
-          <ul class="ryl-list-inline-block ryl-footer-social">
-            <li><a href="#"><i class="ryl-icon-circle-border-3 icon-email29"></i></a></li>
-            <li><a href="#"><i class="ryl-icon-circle-border-3 icon-linkedin"></i></a></li>
-            <li><a href="#"><i class="ryl-icon-circle-border-3 icon-facebook"></i></a></li>
-            <li><a href="#"><i class="ryl-icon-circle-border-3 icon-twitter"></i></a></li>
-            <li><a href="#"><i class="ryl-icon-circle-border-3 icon-dribbble"></i></a></li>
-          </ul>
-          <div class="ryl-footer-content">© 2017 - ALL RIGHTS RESERVED BY <a href="/index">SIBANKUM</a></div>
-        </div>
-      </footer>
+            </div>
+        </section>
+        <footer>
+          <p class="small mt-4">&copy;<script>document.write(new Date().getFullYear())</script> - HAK CIPTA KEMENTERIAN PERTANIAN, RI</p>
+        </footer>
     </div>
 
+    <!-- menu filters -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none;">
+			<defs>
+			  <filter id="shadowed-goo">
+				  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+				  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 12 -7" result="goo" />
+				  <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+				  <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 2 -0.3" result="shadow" />
+				  <feOffset in="shadow" dx="0" dy="0" result="shadow" />
+				  <feComposite in2="shadow" in="goo" result="goo" />
+				  <feComposite in2="goo" in="SourceGraphic" result="mix" />
+			  </filter>
+			  <filter id="goo">
+				  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+				  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+				  <feComposite in2="goo" in="SourceGraphic" result="mix" />
+			  </filter>
+			</defs>
+		</svg>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#table_id').DataTable();
+    });
+    </script>
 
 </body>
 </html>
